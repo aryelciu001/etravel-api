@@ -1,7 +1,8 @@
 //Initializing dependencies
 const ex = require("express");
 const bp = require("body-parser");
-const mon = require("mongoose");
+const mongoose = require("mongoose");
+const cors = require('cors')
 
 //Initializing app
 const app = ex();
