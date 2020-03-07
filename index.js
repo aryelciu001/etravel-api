@@ -1,24 +1,30 @@
 //Initializing dependencies
-const ex = require("express");
-const bp = require("body-parser");
+const express = require("express");
+const bodyparser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require('cors')
 
-//Initializing app
-const app = ex();
-app.use(bp.urlencoded({ extended: false }));
+require('dotenv').config();
 
-//routing
-app.get("/", (req, res) => {
-  res.send("test");
-});
+const app = express();
+const port = process.env.PORT || 5000;
 
-//Modularize routes
-const test = require("./routes/test/test.js");
-app.use("/test", test);
+app.use(bodyparser.urlencoded({ extended: false }));
+app.use(cors());
+app.use(express.json());
+
+const uri = process.env.ATLAS_URI;
+mongoose.connect(uri, {useNewUrlParser:true, useCreateIndex: true});
+
+const connection = mongoose.connection;
+connection.once('open', () => {
+  console.log("MongoDB database connection established")
+})
+
+const usersRouter = require('./routes/users');
+app.use('/users', usersRouter);
 
 //Listening to port
-const port = process.env.PORT || 3001;
 app.listen(port, () => {
   console.log(`Listening to port ${port}`);
 });
