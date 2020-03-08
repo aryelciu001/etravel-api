@@ -2,29 +2,35 @@
 const express = require("express");
 const bodyparser = require("body-parser");
 const mongoose = require("mongoose");
-const cors = require('cors')
-
-require('dotenv').config();
-
+const cors = require("cors");
 const app = express();
-const port = process.env.PORT || 5000;
 
+//environment variables
+require("dotenv").config();
+
+//Express App setting
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(cors());
 app.use(express.json());
 
+//Database connection
 const uri = process.env.ATLAS_URI;
-mongoose.connect(uri, {useNewUrlParser:true, useCreateIndex: true});
-
+mongoose.connect(uri, {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true
+});
 const connection = mongoose.connection;
-connection.once('open', () => {
-  console.log("MongoDB database connection established")
-})
+connection.once("open", () => {
+  console.log("MongoDB database connection established");
+});
 
-const usersRouter = require('./routes/users');
-app.use('/users', usersRouter);
+//Routing
+const usersRouter = require("./routes/users");
+app.use("/users", usersRouter);
 
 //Listening to port
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Listening to port ${port}`);
 });
