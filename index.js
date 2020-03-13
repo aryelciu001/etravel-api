@@ -26,8 +26,8 @@ connection.once("open", () => {
 });
 
 //Routing
-const usersRouter = require("./routes/users");
-app.use("/users", usersRouter);
+const profilesRouter = require("./routes/profile");
+app.use("/profiles", profilesRouter);
 
 //Listening to port
 const port = process.env.PORT || 5000;
