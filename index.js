@@ -21,8 +21,22 @@ connection.once('open', () => {
   console.log("MongoDB database connection established")
 })
 
-const usersRouter = require('./routes/users');
-app.use('/users', usersRouter);
+const profilesRouter = require('./routes/profile');
+app.use('/profiles', profilesRouter);
+
+// const Profile = require('./models/profile.model')
+// const newProfile = new Profile({
+//   name: "djwqojdowqjo",
+// phoneNumber: 
+//     "jqwdjiqwjdoijdwq"
+// ,
+// email: "podwqkkdwpokdkwqpdpopodwq",
+// country: "Indonesia",
+// password: "teseffewffewt"
+// })
+// newProfile.save().then(()=>{
+//   console.log('saved')
+// })
 
 //Listening to port
 app.listen(port, () => {
