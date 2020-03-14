@@ -27,7 +27,9 @@ connection.once("open", () => {
 
 //Routing
 const profilesRouter = require("./routes/profile");
+const recommendationRouter = require("./routes/recommendation");
 app.use("/profiles", profilesRouter);
+app.use("/recommendation", recommendationRouter);
 
 //Listening to port
 const port = process.env.PORT || 5000;

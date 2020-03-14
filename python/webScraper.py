@@ -1,4 +1,5 @@
 import requests
+import json
 from bs4 import BeautifulSoup
 page = requests.get("https://bigseventravel.com/2019/08/50-most-visited-cities-in-the-world/")
 soup = BeautifulSoup(page.content, 'html.parser')
@@ -23,4 +24,4 @@ for i in listOfCities:
     end = i.index(' –')
     listOfCitiesClean.append(i[start+1:end])
 listOfCitiesClean.reverse()
-print(listOfCitiesClean)
+print(json.dumps(listOfCitiesClean))
