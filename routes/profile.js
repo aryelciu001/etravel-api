@@ -1,8 +1,20 @@
 const router = require("express").Router();
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 const saltRounds = 10;
+const verify = require('./verifyToken');
 let Profile = require("../models/profile.model");
 let User = require("../models/user.model");
+
+
+//after login, user is authenticated, get current user by req.currentUser
+router.get('/afterLogin', verify, (req,res) => {
+  const currentUser = req.currentUser;          // get currentUser authenticated
+
+  User.find({_id: currentUser._id}).then((user)=>{
+    res.send(user);
+  })
+})
 
 //get all users
 router.route("/").get((req, res) => {
@@ -22,6 +34,10 @@ router.route("/login").post((req, res) => {
       bcrypt.compare(req.body.password, currentProfile.password).then(function(result) {
         if(result == true){
           User.find({profile: currentProfile}).then((user)=>{
+            const token = jwt.sign({ _id: user[0]._id }, process.env.TOKEN_SECRET);
+            res.header('auth-token', token);
+            // front end can access this to check whether user logged in or not
+
             res.send(user);
           })
         }
