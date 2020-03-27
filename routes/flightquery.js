@@ -2,7 +2,7 @@ const router = require("express").Router();
 const axios = require('axios');
 
 router.route("/").post((req, res) =>{
-    const sourceCity = req.body.source;
+    const sourceCity = req.body.source;                         // must be city
     const destinationCity = req.body.destination;               // must be city
     const dateOfDeparture = req.body.departureDate;             // YYYY-MM-DD
     const dateOfReturn = req.body.returnDate;                   // YYYY-MM-DD
