@@ -28,8 +28,10 @@ connection.once("open", () => {
 //Routing
 const profilesRouter = require("./routes/profile");
 const recommendationRouter = require("./routes/recommendation");
+const hotelqueryRouter = require("./routes/hotelquery");
 app.use("/profiles", profilesRouter);
 app.use("/recommendation", recommendationRouter);
+app.use("/hotelquery", hotelqueryRouter);
 
 //Listening to port
 const port = process.env.PORT || 5000;
