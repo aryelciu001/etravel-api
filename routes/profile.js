@@ -14,6 +14,14 @@ router.get("/afterLogin", verify, (req, res) => {
   });
 });
 
+//get the profile information
+router.post("/getProfile", verify, (req, res) => {
+  const profileId = req.body.profileId;
+  Profile.find({ _id: profileId }).then(profile => {
+    res.send(profile);
+  });
+});
+
 //get all users
 router.route("/").get((req, res) => {
   Profile.find()

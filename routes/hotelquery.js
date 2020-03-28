@@ -2,10 +2,10 @@ const router = require("express").Router();
 const axios = require("axios");
 
 router.route("/").post((req, res) => {
-  const destination = req.body.destination; // must be city
+  const destinationCity = req.body.destination; // must be city
   const dateCheckIn = req.body.dateCheckIn; // YYYY-MM-DD
   const dateCheckOut = req.body.dateCheckOut; // YYYY-MM-DD
-  const url = `https://hotels4.p.rapidapi.com/locations/search?locale=en_US&query=${destination}`;
+  const url = `https://hotels4.p.rapidapi.com/locations/search?locale=en_US&query=${destinationCity}`;
   const headers = {
     "x-rapidapi-host": "hotels4.p.rapidapi.com",
     "x-rapidapi-key": "a73b75f34dmsha28cc2ab4d28bffp17ea54jsn1d9d7b1ca033"
