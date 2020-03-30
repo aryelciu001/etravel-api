@@ -21,7 +21,7 @@ router.route("/").post((req, res) =>{
         const destinationId = result[1].data.Places[0].CityId;
         const finalQueryUrl = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/${sourceId}/${destinationId}/${dateOfDeparture}?inboundpartialdate=${dateOfReturn}`
         axios.get(finalQueryUrl, {headers}).then((finalResult) =>{
-            res.send(finalResult.data);d
+            res.send(finalResult.data);
         })
     })
 })
