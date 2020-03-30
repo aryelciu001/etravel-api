@@ -15,7 +15,6 @@ router.get("/afterLogin", verify, (req, res) => {
 });
 
 //update profile
-
 router.post("/updateProfile", verify, (req,res) => {
   const profileId = req.body.profileId;
   Profile.find({_id: profileId }).then(profile => {
