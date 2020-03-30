@@ -14,6 +14,63 @@ router.get("/afterLogin", verify, (req, res) => {
   });
 });
 
+//update profile
+
+router.post("/updateProfile", verify, (req,res) => {
+  const profileId = req.body.profileId;
+  Profile.find({_id: profileId }).then(profile => {
+    profile = profile[0];
+    console.log(profile);
+    console.log("Current password : ", profile.password);
+
+    if(req.body.newName){
+      profile.name = req.body.newName;
+    }
+
+    if(req.body.newEmail){
+      profile.email = req.body.newEmail;
+    }
+
+    if(req.body.newPhoneNumber){
+      profile.phoneNumber = req.body.newPhoneNumber;
+    }
+
+    if(req.body.newCountry){
+      profile.country = req.body.newCountry;
+    }
+
+    var promises = []
+
+    if(req.body.newPassword && req.body.oldPassword){
+        var promise = bcrypt
+            .compare(req.body.oldPassword, profile.password)
+      promises.push(promise)
+    }
+
+     Promise.all(promises).then((result)=>{
+
+       if(result.length === 0){
+         profile.save();
+         res.send(profile);
+       }
+       else{
+         if(result[0] === true){
+           console.log("Paswword matched")
+           bcrypt.hash(req.body.newPassword, saltRounds).then(hashedPassword => {
+             profile.password = hashedPassword;
+             profile.save()
+             res.send(profile);
+           });
+         }
+         else{
+           console.log("wrong password")
+           res.send("Wrong Password");
+         }
+       }
+     })
+  })
+})
+
 //get the profile information
 router.post("/getProfile", verify, (req, res) => {
   const profileId = req.body.profileId;
