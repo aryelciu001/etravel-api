@@ -30,10 +30,12 @@ const profilesRouter = require("./routes/profile");
 const recommendationRouter = require("./routes/recommendation");
 const hotelqueryRouter = require("./routes/hotelquery");
 const flightqueryRouter = require("./routes/flightquery");
+const profilingResultRouter = require("./routes/profilingResult");
 app.use("/profiles", profilesRouter);
 app.use("/recommendation", recommendationRouter);
 app.use("/hotelquery", hotelqueryRouter);
 app.use("/flightquery", flightqueryRouter);
+app.use("/profres", profilingResultRouter);
 
 //Listening to port
 const port = process.env.PORT || 5000;
