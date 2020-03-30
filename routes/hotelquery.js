@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const axios = require("axios");
 
+const name = require('../computation/hotelquery')
+
 router.route("/").post((req, res) => {
   const destinationCity = req.body.destination; // must be city
   const dateCheckIn = req.body.dateCheckIn; // YYYY-MM-DD
@@ -15,7 +17,8 @@ router.route("/").post((req, res) => {
       result.data.suggestions[0].entities[1].destinationId;
     const urlFinalQuery = `https://hotels4.p.rapidapi.com/properties/list?destinationId=${finalDestinationId}&type=CITY&pageNumber=1&pageSize=75&adults1=1&checkIn=${dateCheckIn}&checkOut=${dateCheckOut}`;
     axios.get(urlFinalQuery, { headers }).then(finalResult => {
-      res.send(finalResult.data);
+        const finalAnswer = name(finalResult.data);
+        res.send(finalAnswer);
     });
   });
 });
