@@ -1,6 +1,7 @@
 const ex = require("express");
 const router = ex.Router();
 const ProfilingResult = require("../models/profilingresult.model");
+const User = require("../models/user.model");
 
 router.post("/addprofres", (req, res) => {
   const hotel = req.body.hotel;
@@ -14,7 +15,6 @@ router.post("/addprofres", (req, res) => {
     itinerary
   });
   newProfRes.save().then(theProfResult => {
-    const User = require("../models/user.model");
     User.findOne({ _id: req.body.user }).then(user => {
       user.profilingResult = theProfResult;
       user
@@ -31,10 +31,11 @@ router.post("/addprofres", (req, res) => {
 });
 
 router.post("/getprofres", (req, res) => {
-  const User = require("../models/user.model");
-  const _id = req.body.id;
+  const _id = req.body.user;
   User.findOne({ _id }).then(theUser => {
-    res.send(theUser.profilingResult);
+    ProfilingResult.findOne({ _id: theUser.profilingResult }).then(profres => {
+      res.send(profres);
+    });
   });
 });
 
