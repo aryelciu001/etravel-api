@@ -1,6 +1,6 @@
 {
   "Singapore": {
-    "Nature&Parks": [
+    "Nature (Mountains, Lakes, Rivers)": [
       {
         "name": "National Orchid Garden",
         "url": "https://media-cdn.tripadvisor.com/media/photo-f/05/ae/4f/a2/national-orchid-garden.jpg"
@@ -21,33 +21,108 @@
         "name": "Marina Bay",
         "url": "https://media-cdn.tripadvisor.com/media/photo-f/12/0d/fc/1c/marina-bay-sands-skyline.jpg"
       },
-      "Singapore Zoo",
-      "MacRitchie Nature Trail",
-      "The Southern Ridges",
-      "MacRitchie Reservoir",
-      "Singapore River",
-      "Flower Dome",
-      "Sungei Buloh Wetland Reserve",
-      "Jurong Bird Park",
-      "East Coast Park",
-      "Fort Canning Park",
-      "Marina Barrage",
-      "Pororo Park Singapore",
-      "Esplanade Park",
-      "Chinese and Japanese Gardens",
-      "Bukit Timah Nature Reserve",
-      "Labrador Nature Reserve",
-      "Mount Faber",
-      "Haw Par Villa",
-      "Hort Park",
-      "Far East Organization Children's Garden",
-      "Changi Beach",
-      "Pasir Ris Town Park",
-      "Jacob Ballas Children's Garden",
-      "HSBC Rain Vortex",
-      "Bishan Ang Mo Kio Park"
+      {
+        "name": "Singapore Zoo",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0a/1d/a2/76/caption.jpg"
+      },
+      {
+        "name": "MacRitchie Nature Trail",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/02/48/f9/c4/tree-top-walk-suspension.jpg"
+      },
+      {
+        "name": "The Southern Ridges",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/10/96/92/ad/walk-above-the-forest.jpg"
+      },
+      {
+        "name": "MacRitchie Reservoir",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/11/63/bf/49/wx-camera-1511656252475.jpg"
+      },
+      {
+        "name": "Singapore River",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0c/c5/80/56/night-pic-of-singapore.jpg"
+      },
+      {
+        "name": "Flower Dome",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0a/3b/de/47/flower-field.jpg"
+      },
+      {
+        "name": "Sungei Buloh Wetland Reserve",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/01/5d/5d/98/sungei-buloh-wetlands.jpg"
+      },
+      {
+        "name": "Jurong Bird Park",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/06/4b/f1/48/jurong-bird-park.jpg"
+      },
+      {
+        "name": "East Coast Park",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/07/d2/0c/32/east-coast-park.jpg"
+      },
+      {
+        "name": "Fort Canning Park",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/02/48/25/79/fort-canning-centre-picture.jpg"
+      },
+      {
+        "name": "Marina Barrage",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/04/73/6b/7b/marina-barrage.jpg"
+      },
+      {
+        "name": "Pororo Park Singapore",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/12/9a/c5/cd/head-down-to-pororo-park.jpg"
+      },
+      {
+        "name": "Esplanade Park",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/01/35/5c/6c/another-shot-of-the-esplanade.jpg"
+      },
+      {
+        "name": "Chinese and Japanese Gardens",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/09/57/2f/3c/chinese-and-japanese.jpg"
+      },
+      {
+        "name": "Bukit Timah Nature Reserve",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/01/1b/97/59/a-reservoir-on-one-of.jpg"
+      },
+      {
+        "name": "Labrador Nature Reserve",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/06/0f/14/02/serene-tranquility.jpg"
+      },
+      {
+        "name": "Mount Faber",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/14/1a/a1/3d/view-from-mount-faber.jpg"
+      },
+      {
+        "name": "Haw Par Villa",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/13/2a/ac/5a/tiger-balm-gardens.jpg"
+      },
+      {
+        "name": "Hort Park",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/12/7d/af/b3/hort-park.jpg"
+      },
+      {
+        "name": "Far East Organization Children's Garden",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/0a/77/a2/22/getlstd-property-photo.jpg"
+      },
+      {
+        "name": "Changi Beach",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/04/6f/ef/3c/changi-beach.jpg"
+      },
+      {
+        "name": "Pasir Ris Town Park",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/11/c2/2e/84/walking-and-cycling-path.jpg"
+      },
+      {
+        "name": "Jacob Ballas Children's Garden",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/13/47/46/2a/a-sanctuary-for-kids.jpg"
+      },
+      {
+        "name": "HSBC Rain Vortex",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/17/2f/2b/c9/hsbc-rain-vortex-at-night.jpg"
+      },
+      {
+        "name": "Bishan Ang Mo Kio Park",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0e/4a/5c/84/caption.jpg"
+      }
     ],
-    "Museums": [
+    "History (Museums, Temples, Relics)": [
       {
         "name": "Battlebox",
         "url": "https://media-cdn.tripadvisor.com/media/photo-i/12/bb/9c/ba/battlebox.jpg"
@@ -70,42 +145,106 @@
       },
       {
         "name": "National Museum of Singapore",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/06/a0/df/a5/national-museum-of-singapore.jpg"
       },
       {
         "name": "Singapore City Gallery",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0f/8f/84/97/photo1jpg.jpg"
       },
       {
         "name": "Asian Civilisations Museum",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/01/fc/53/a5/asian-civilisations-museum.jpg"
       },
       {
         "name": "National Gallery Singapore",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/11/ec/5b/45/national-gallery-singapore.jpg"
       },
       {
         "name": "The Changi Museum",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/04/59/a5/28/changi-chapel-and-museum.jpg"
       },
       {
         "name": "Peranakan Museum",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0a/0a/c4/cb/peranakan-museum.jpg"
       },
       {
         "name": "ION Orchard",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/14/02/9d/8e/caption.jpg"
       },
       {
         "name": "Singapore Philatelic Museum",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/15/08/50/90/philatelic-museum-singapore.jpg"
       },
       {
         "name": "Lee Kong Chian Natural History Museum",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0e/64/00/22/photo2jpg.jpg"
+      },
+      {
+        "name": "Science Centre Singapore",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/18/0f/c5/e4/dinoquest-exhibition.jpg"
+      },
+      {
+        "name": "Former Ford Factory",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/17/c0/18/98/photo0jpg.jpg"
+      },
+      {
+        "name": "Surviving the Japanese Occupation: War and Its Legacies",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/06/b6/ee/fd/memories-at-old-ford.jpg"
+      },
+      {
+        "name": "ArtScience Museum at Marina Bay Sands",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/12/0e/00/0b/singapore-art-science.jpg"
+      },
+      {
+        "name": "Indian Heritage Centre",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/08/16/11/8d/photo0jpg.jpg"
+      },
+      {
+        "name": "The Bubble Tea Factory",
+        "url": "https://static.tacdn.com/img2/social/no_photo_attraction.gif"
+      },
+      {
+        "name": "Singapore Art Museum",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/07/fb/37/2a/singapore-art-museum.jpg"
+      },
+      {
+        "name": "Reflections at Bukit Chandu",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/04/80/a8/36/reflections-at-bukit.jpg"
+      },
+      {
+        "name": "Malay Heritage Centre",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/03/70/13/4a/the-former-palace-which.jpg"
+      },
+      {
+        "name": "UOB",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/08/60/e8/3e/uob-plaza.jpg"
+      },
+      {
+        "name": "Singapore Musical Box Museum",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0c/15/39/f4/components-of-a-hand.jpg"
+      },
+      {
+        "name": "Mint Museum of Toys",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/1a/ba/79/22/mint-museum-of-toys-featuring.jpg"
+      },
+      {
+        "name": "Ode To Art",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0e/f4/6a/6e/interior-of-the-gallery.jpg"
+      },
+      {
+        "name": "Air Force Museum",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/02/28/66/a8/air-force-museum.jpg"
+      },
+      {
+        "name": "Civil Defence Heritage Gallery",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/01/58/88/ac/civil-defence-heritage.jpg"
+      },
+      {
+        "name": "Hill Street Building",
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/18/3c/4a/1c/photo0jpg.jpg"
       }
     ],
-    "Shopping": [
+    "Shopping (Malls, Shopping Center)": [
       {
         "name": "Jewel Changi Airport",
         "url": "https://media-cdn.tripadvisor.com/media/photo-i/17/2d/3a/0e/photo0jpg.jpg"
@@ -128,103 +267,103 @@
       },
       {
         "name": "Raffles City",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/17/fa/9a/39/raffles-city-mall-clicked.jpg"
       },
       {
         "name": "Raffles Hotel Arcade",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/18/9a/6c/d3/raffles-boutique.jpg"
       },
       {
         "name": "Suntec City",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/18/99/c0/ca/fountain-of-wealth-touch.jpg"
       },
       {
         "name": "313@somerset",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0a/e6/aa/7f/inside-the-mall_rotated_270.jpg"
       },
       {
         "name": "Plaza Singapura",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/14/7a/ba/6c/multi-storey-mall-connected.jpg"
       },
       {
         "name": "Ngee Ann City",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/07/ff/f1/76/ngee-ann-city.jpg"
       },
       {
         "name": "City Square Mall",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0b/17/d5/57/city-square-mall.jpg"
       },
       {
         "name": "Mustafa Centre",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/17/67/71/17/photo0jpg.jpg"
       },
       {
         "name": "Tekka Centre",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/02/2e/92/42/one-of-the-many-fruit.jpg"
       },
       {
         "name": "Jurong Point Shopping Mall",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/07/55/77/89/japanese-theme-restaurant.jpg"
       },
       {
         "name": "Marina Square",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/04/4c/93/f1/marina-square.jpg"
       },
       {
         "name": "Chinatown Point",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0c/cc/37/ad/shops.jpg"
       },
       {
         "name": "People's Park Complex",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/07/e9/c3/bf/people-s-park-complex.jpg"
       },
       {
         "name": "IMM Outlet Mall",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/10/95/d6/f8/imm-outlet-mall.jpg"
       },
       {
         "name": "Bugis+",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/0a/78/57/34/facade-of-bugis.jpg"
       },
       {
         "name": "Great World",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0e/67/8e/74/photo1jpg.jpg"
       },
       {
         "name": "Orchard Central",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/07/ff/f8/6b/orchard-central.jpg"
       },
       {
         "name": "Wisma Atria Shopping Centre",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/01/f1/70/31/provided-by-wisma-atria.jpg"
       },
       {
         "name": "HarbourFront Centre",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/08/3d/6b/7c/harbourfront-centre-singapore.jpg"
       },
       {
         "name": "Funan",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/03/6d/6d/45/funan-digital-mall.jpg"
       },
       {
         "name": "Liang Court",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/09/64/64/56/liang-court.jpg"
       },
       {
         "name": "Riverside Point",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0f/f8/15/48/photo3jpg.jpg"
       },
       {
         "name": "Paya Lebar Quarter",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/1a/7a/82/df/flashbackfriday-to-our.jpg"
       },
       {
         "name": "Waterway Point",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0d/09/72/d3/waterway-point-mall.jpg"
       },
       {
         "name": "Nex",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/0a/61/88/55/cny-dinner-din-tai-fung.jpg"
       }
     ],
     "Landmarks": [
@@ -250,108 +389,108 @@
       },
       {
         "name": "Orchard Road",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/08/b7/cd/fd/retail-and-entertainment.jpg"
       },
       {
         "name": "Battlebox",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/12/bb/9c/ba/battlebox.jpg"
       },
       {
         "name": "Supertree Grove",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/09/f4/90/90/supertree-grove.jpg"
       },
       {
         "name": "Waterfront Promenade",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/15/c3/a2/eb/po-drugiej-stronie-oryginalna.jpg"
       },
       {
         "name": "Kranji War Memorial",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/11/54/46/8a/graves.jpg"
       },
       {
         "name": "The Southern Ridges",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/10/96/92/ad/walk-above-the-forest.jpg"
       },
       {
         "name": "Bukit Brown Cemetery",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/05/e0/b6/88/bukit-brown-cemetery.jpg"
       },
       {
         "name": "Buddha Tooth Relic Temple and Museum",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/03/cd/dc/ac/buddha-tooth-relic-temple.jpg"
       },
       {
         "name": "Esplanade - Theatres on the Bay",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/09/2a/9b/0c/esplanade-theatres-on.jpg"
       },
       {
         "name": "Flower Dome",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0a/3b/de/47/flower-field.jpg"
       },
       {
         "name": "National Gallery Singapore",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/11/ec/5b/45/national-gallery-singapore.jpg"
       },
       {
         "name": "The Helix Bridge",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0e/48/52/69/caption.jpg"
       },
       {
         "name": "OCBC Skyway",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/18/40/b5/d1/caption.jpg"
       },
       {
         "name": "Marina Barrage",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/04/73/6b/7b/marina-barrage.jpg"
       },
       {
         "name": "The Pinnacle @ Duxton",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/04/12/3b/01/the-pinnacle-duxton.jpg"
       },
       {
         "name": "Singapore Cable Car",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/07/11/1e/bd/singapore-cable-car.jpg"
       },
       {
         "name": "NUS Baba House",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0e/c5/04/45/caption.jpg"
       },
       {
         "name": "Chijmes",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0e/a9/2e/cf/photo1jpg.jpg"
       },
       {
         "name": "Sultan Mosque",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/11/d7/9b/12/caption.jpg"
       },
       {
         "name": "Haji Lane",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/05/73/c4/c8/haji-lane.jpg"
       },
       {
         "name": "Kampong Glam",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0f/a6/d7/ac/kampong-glam.jpg"
       },
       {
         "name": "Merlion Park",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/18/33/5c/4c/1807-merlion-marinabay.jpg"
       },
       {
         "name": "Emerald Hill",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/11/7e/16/6d/the-colours-will-make.jpg"
       },
       {
         "name": "Parkview Square",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/05/6b/a6/32/strange-beautiful-garden.jpg"
       },
       {
         "name": "Henderson Waves",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/03/1d/8c/94/henderson-waves.jpg"
       }
     ]
   },
   "Bali": {
-    "Nature&Parks": [
+    "Nature (Mountains, Lakes, Rivers)": [
       {
         "name": "Sacred Monkey Forest Sanctuary",
         "url": "https://media-cdn.tripadvisor.com/media/photo-s/03/bf/9c/95/monkey-forest.jpg"
@@ -374,106 +513,106 @@
       },
       {
         "name": "USS Liberty Shipwreck",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0e/7c/58/00/fishes.jpg"
       },
       {
         "name": "Beji Guwang Hidden Canyon",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/11/8b/ae/1e/the-scenery.jpg"
       },
       {
         "name": "Nungnung Waterfall",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0a/54/26/a8/img-5332-largejpg.jpg"
       },
       {
         "name": "Gunung Payung Beach",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0d/41/04/04/view-from-the-stairs.jpg"
       },
       {
         "name": "Bali Eco Tours",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0e/64/1d/ff/bali-cycling.jpg"
       },
       {
         "name": "Melasti Beach",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/13/07/2f/7d/melasti-beach.jpg"
       },
       {
         "name": "Atuh Beach",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0d/9b/84/37/views.jpg"
       },
       {
         "name": "Les Waterfall",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/09/b4/2a/bf/beautiful-and-refreshing.jpg"
       },
       {
         "name": "Mount Agung",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/17/b0/3f/2b/mt-agung-friday-may-24th.jpg"
       },
       {
         "name": "Tirta Gangga",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0f/c3/d9/99/photo3jpg.jpg"
       },
       {
         "name": "Pasih Uug Beach",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0b/99/4f/1a/broken-beach-at-3-pm.jpg"
       },
       {
         "name": "Toekad Rafting",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/05/bc/30/31/toekad-rafting.jpg"
       },
       {
         "name": "Bali Bird Park",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/1b/2c/24/82/let-your-imagination.jpg"
       },
       {
         "name": "Sekumpul Waterfalls",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0b/e7/9f/a8/marvellous-sekumpul-waterfalls.jpg"
       },
       {
         "name": "Bali Sea Turtle Society (BSTS)",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/10/ff/5c/f0/baby-turtles.jpg"
       },
       {
         "name": "Turtle Conservation and Education Centre",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0b/81/9f/2e/turtle-conservation-and.jpg"
       },
       {
         "name": "Bali Zoo",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0e/bc/d0/12/breakfast-with-orangutan.jpg"
       },
       {
         "name": "Melanting Waterfalls",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/11/1d/60/b2/photo1jpg.jpg"
       },
       {
         "name": "Aling-Aling Waterfall",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/16/67/da/b9/photo0jpg.jpg"
       },
       {
         "name": "Menjangan Island",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/09/f0/ae/d6/menjangan-island.jpg"
       },
       {
         "name": "Tegal Wangi Beach",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/16/d9/75/60/tegal-wangi-beach.jpg"
       },
       {
         "name": "Blue Point Beach",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/08/9e/78/3e/blue-point-beach.jpg"
       },
       {
         "name": "Lipah Beach",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/09/f7/2a/e8/pantai-lipah.jpg"
       },
       {
         "name": "Tibumana Waterfall",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/10/f2/ed/58/tibumana-waterfall.jpg"
       },
       {
         "name": "Night At The Zoo",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/1a/a7/a3/55/night-at-the-zoo-at-bali.jpg"
       }
     ],
-    "Museums": [
+    "History (Museums, Temples, Relics)": [
       {
         "name": "Five Art Studio",
         "url": "https://media-cdn.tripadvisor.com/media/photo-s/08/4c/3b/ef/getlstd-property-photo.jpg"
@@ -496,106 +635,106 @@
       },
       {
         "name": "Museum PASIFIKA",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/12/ac/6f/29/museum-pasifika-building.jpg"
       },
       {
         "name": "Semar Kuning Artist Cooperative",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/06/2a/28/42/semar-kuning-artist-cooperativ.jpg"
       },
       {
         "name": "Agung Rai Museum of Art (ARMA)",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/10/5f/e1/e1/one-of-the-buildings.jpg"
       },
       {
         "name": "Neka Art Museum",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/0b/80/9b/65/20160530-141135-largejpg.jpg"
       },
       {
         "name": "DMZ Bali 3D Art Museum",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/10/12/59/1f/img-20170729-wa0018-largejpg.jpg"
       },
       {
         "name": "Bajra Sandhi Monument",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/07/a6/42/04/bajra-sandhi-monument.jpg"
       },
       {
         "name": "Don Antonio Blanco Museum",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/09/b9/ef/9e/don-antonio-blanco-museum.jpg"
       },
       {
         "name": "Museum Puri Lukisan",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/05/3b/0e/a8/museum-puri-lukisan.jpg"
       },
       {
         "name": "Museum Rudana",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/05/1a/5d/af/miss-world-2013-finalist.jpg"
       },
       {
         "name": "Upside Down World",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0a/8b/e3/b1/try-cooking-upside-down.jpg"
       },
       {
         "name": "Skull",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/18/12/5f/07/skulls.jpg"
       },
       {
         "name": "Sari Api Ceramic Studio",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/12/7e/9c/63/ceramics-after-glazing.jpg"
       },
       {
         "name": "METIS Gallery & Boutiques",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0c/59/2f/57/gallery-interior.jpg"
       },
       {
         "name": "I AM Bali - 3D Museum & Upside Down",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0c/c7/de/97/i-am-bali.jpg"
       },
       {
         "name": "Wayan Gama Painter Group and School",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0c/17/93/7d/wayan-gama-painter-group.jpg"
       },
       {
         "name": "Positive Negative Visual Gallery",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/05/1c/95/46/positive-negative-visual.jpg"
       },
       {
         "name": "UC Silver Gold",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/11/1a/ee/a5/uc-silver3.jpg"
       },
       {
         "name": "Nacivet Art Gallery",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0e/7f/28/07/caption.jpg"
       },
       {
         "name": "Wake Bali Art Market",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0c/34/2b/98/silver-items.jpg"
       },
       {
         "name": "Ikat Gallery",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/10/09/59/3c/ikat-gallery.jpg"
       },
       {
         "name": "BIASA Cube",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/1a/36/8f/23/getlstd-property-photo.jpg"
       },
       {
         "name": "Bandem Silver",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0b/69/91/ea/1-all-but-the-ring-on.jpg"
       },
       {
         "name": "Reservoart",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0d/6c/6c/5f/reservoart-gallery-seminyak.jpg"
       },
       {
         "name": "Horizon Glassworks",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/06/5b/bf/bb/horizon-glassworks.jpg"
       },
       {
         "name": "Yana Art Gallery",
-        "url": ""
+        "url": "https://static.tacdn.com/img2/social/no_photo_attraction.gif"
       }
     ],
-    "Shopping": [
+    "Shopping (Malls, Shopping Center)": [
       {
         "name": "Samasta Lifestyle Village",
         "url": "https://media-cdn.tripadvisor.com/media/photo-f/0d/3f/7a/f2/samasta-lifestyle-village.jpg"
@@ -618,91 +757,91 @@
       },
       {
         "name": "Bali Collection",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/01/f6/9e/a9/lobby-a-main-enterance.jpg"
       },
       {
         "name": "Level 21 Mall",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0e/54/b8/44/level-21-mall-denpasar.jpg"
       },
       {
         "name": "Plaza Renon",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/13/17/13/69/dalam-gedung.jpg"
       },
       {
         "name": "Seminyak Village",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/11/d4/a5/9e/welcome-to-seminyak-village.jpg"
       },
       {
         "name": "Hardy's Sanur",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/17/ad/90/1b/hardy-s-sanur.jpg"
       },
       {
         "name": "Park 23 Entertainment Centre",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0a/cc/f2/82/park-23-entertainment.jpg"
       },
       {
         "name": "Pasar Badung",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/03/2c/39/c5/pasar-badung.jpg"
       },
       {
         "name": "Ramayana Bali Mall",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0b/ca/c3/cd/ground-floor.jpg"
       },
       {
         "name": "Bali Brasco Shopping Centre",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/11/96/3f/d3/food-court.jpg"
       },
       {
         "name": "Seminyak Square",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0c/1b/eb/a7/outside-part.jpg"
       },
       {
         "name": "Lotte Mart",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/10/d5/af/15/photo0jpg.jpg"
       },
       {
         "name": "Hardy's Shopping Center",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0f/f0/45/0d/caption.jpg"
       },
       {
         "name": "The Bay Bali",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/0b/98/dd/25/the-bay-bali.jpg"
       },
       {
         "name": "T Galleria by DFS, Bali",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/12/9f/a6/f8/gifts-and-souvenirs.jpg"
       },
       {
         "name": "Sidewalk Jimbaran Mall",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/1a/96/6a/37/sidewalk-jimbaran-mall.jpg"
       },
       {
         "name": "Trans Studio Mall Bali",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/17/e6/5d/21/img-20190603-095954-largejpg.jpg"
       },
       {
         "name": "Lippo Plaza Sunset",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/17/c5/2c/a9/celebrity-fitness.jpg"
       },
       {
         "name": "Canggu Avenue",
-        "url": ""
+        "url": "https://static.tacdn.com/img2/social/no_photo_attraction.gif"
       },
       {
         "name": "Wayan's Shop",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/14/ae/54/82/wooden-birds.jpg"
       },
       {
         "name": "Hardy's Mall",
-        "url": ""
+        "url": "https://static.tacdn.com/img2/social/no_photo_attraction.gif"
       },
       {
         "name": "Benoa Square Bali",
-        "url": ""
+        "url": "https://static.tacdn.com/img2/social/no_photo_attraction.gif"
       },
       {
         "name": "Ubud Point Shopping Centre",
-        "url": ""
+        "url": "https://static.tacdn.com/img2/social/no_photo_attraction.gif"
       }
     ],
     "Landmarks": [
@@ -728,108 +867,108 @@
       },
       {
         "name": "Gunung Kawi Sebatu Temple",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/11/11/71/f9/photo1jpg.jpg"
       },
       {
         "name": "Ubud Kajeng Rice Fields Walk",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/18/1f/7c/34/photo0jpg.jpg"
       },
       {
         "name": "Tirta Gangga",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0f/c3/d9/99/photo3jpg.jpg"
       },
       {
         "name": "Mount Kawi",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/16/fd/84/b3/img-20190326-142936-largejpg.jpg"
       },
       {
         "name": "Pura Tirta Empul Segara Merta Sari",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0e/7a/77/94/water-temple.jpg"
       },
       {
         "name": "Brahma Vihara Arama Buddhist Monastery",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/18/30/4f/e9/the-pond-inside-the-vihara.jpg"
       },
       {
         "name": "St. Francis Xavier Catholic Church",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/15/7f/74/55/20181125-120351-largejpg.jpg"
       },
       {
         "name": "Ujung Water Palace",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/16/0d/b4/65/taman-ujung-karangasem.jpg"
       },
       {
         "name": "Luhur Batukaru Temple",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0d/ff/14/9e/photo2jpg.jpg"
       },
       {
         "name": "Satria Gatotkaca Statue",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/10/e0/58/39/satria-gatotkaca.jpg"
       },
       {
         "name": "Penglipuran",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0f/d7/bd/80/img-20170630-211746-largejpg.jpg"
       },
       {
         "name": "Tirta Empul Temple",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0c/da/48/2a/temple-de-tirta-empul.jpg"
       },
       {
         "name": "Taman Nusa",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/04/60/3c/38/taman-nusa-bali-banjarangka.jpg"
       },
       {
         "name": "Bali Pulina Coffee Plantation",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0f/a7/bc/15/photo4jpg.jpg"
       },
       {
         "name": "Kehen Temple",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/16/62/be/e7/caption.jpg"
       },
       {
         "name": "Taman Ayun Temple",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/11/f9/24/e2/taman-ayun-temple.jpg"
       },
       {
         "name": "Japanese Ship Wreck Point",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/1a/e5/33/17/getlstd-property-photo.jpg"
       },
       {
         "name": "Ground Zero Monument",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/04/bd/b2/b6/ground-zero.jpg"
       },
       {
         "name": "Istana Tampak Siring",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0d/54/0a/57/temple.jpg"
       },
       {
         "name": "Campuhan Ridge Walk",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0e/bb/c7/a6/photo0jpg.jpg"
       },
       {
         "name": "Blue Lagoon Cliff Jump",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/18/cd/48/6b/snorkeling.jpg"
       },
       {
         "name": "Gunung Lebah Temple",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0e/cf/5d/40/l-ensemble-des-temples.jpg"
       },
       {
         "name": "Ulun Danu Bratan Temple",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/14/5a/35/df/tempel.jpg"
       },
       {
         "name": "Bawa Bali - Private Tours",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/11/f2/57/70/bawa-bali-private-tours.jpg"
       },
       {
         "name": "Saraswati Temple",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/12/23/21/fc/lotus-pond.jpg"
       }
     ]
   },
   "Kuala Lumpur": {
-    "Nature&Parks": [
+    "Nature (Mountains, Lakes, Rivers)": [
       {
         "name": "KLCC Park",
         "url": "https://media-cdn.tripadvisor.com/media/photo-f/06/e7/2f/1d/klcc-park.jpg"
@@ -852,103 +991,103 @@
       },
       {
         "name": "Bukit Gasing Forest Reserve",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/12/24/e7/02/path-up-bukit-gasing.jpg"
       },
       {
         "name": "Kuala Lumpur Butterfly Park",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/01/46/a6/1c/butterfly-park.jpg"
       },
       {
         "name": "KL Tower Mini Zoo",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0f/b2/0f/c5/kl-tower-mini-zoo.jpg"
       },
       {
         "name": "Batu Caves",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/14/30/bf/6f/caption.jpg"
       },
       {
         "name": "KL Forest Eco Park",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0c/3e/99/09/photo0jpg.jpg"
       },
       {
         "name": "Kanching Rainforest Waterfall",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/01/28/eb/6a/waterfall-number-4.jpg"
       },
       {
         "name": "Taman Orkid Kuala Lumpur",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/03/6d/28/a0/one-of-the-beautiful.jpg"
       },
       {
         "name": "Taman Tasik Titiwangsa",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0e/bd/02/8b/lake-view.jpg"
       },
       {
         "name": "Bukit Kiara Park",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/16/71/14/73/bukit-kiara-park.jpg"
       },
       {
         "name": "Taman Rekreasi Bukit Jalil",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0e/fc/ed/a9/taman-rekreasi-bukit.jpg"
       },
       {
         "name": "Taman Tugu",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/16/48/c7/77/trees-in-taman-tugu.jpg"
       },
       {
         "name": "The Hibiscus Park",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/09/ce/20/4f/hibiscus-garden.jpg"
       },
       {
         "name": "Asean Sculpture Garden",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0c/a6/5f/e3/asean-sculpture-garden.jpg"
       },
       {
         "name": "Taman Botani Perdana",
-        "url": ""
+        "url": "https://static.tacdn.com/img2/social/no_photo_attraction.gif"
       },
       {
         "name": "Desa Park City",
-        "url": ""
+        "url": "https://static.tacdn.com/img2/social/no_photo_attraction.gif"
       },
       {
         "name": "Kota Damansara Community Forest Reserve",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0f/ac/a5/63/kota-damansara-community.jpg"
       },
       {
         "name": "Kepong Botanical Garden",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0f/fb/0a/24/kepong-botanical-garden.jpg"
       },
       {
         "name": "Templer Park",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/07/59/d6/70/templer-park.jpg"
       },
       {
         "name": "Taman Tasik Permaisuri",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0f/67/7c/7a/taman-tasik-permaisuri.jpg"
       },
       {
         "name": "Ampang Hilir Park",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0f/30/d2/b8/ampang-hilir-park.jpg"
       },
       {
         "name": "District 21",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0f/ee/18/8c/parents-there-is-actually.jpg"
       },
       {
         "name": "Gabai Waterfalls",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/11/68/a4/65/gabai-waterfalls.jpg"
       },
       {
         "name": "Bamboo Playhouse",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0e/08/7d/21/bamboo-playhouse.jpg"
       },
       {
         "name": "Kepong Metropolitan Lake-Garden",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/15/54/e5/c6/scenery-round-the-lake.jpg"
       },
       {
         "name": "Sentul Park",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/08/60/37/c3/sentul-park.jpg"
       }
     ],
     "Museum": [
@@ -974,106 +1113,106 @@
       },
       {
         "name": "Kuala Lumpur City Gallery",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/09/97/d1/d0/kuala-lumpur-city-gallery.jpg"
       },
       {
         "name": "National Museum",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0f/58/11/cf/caption.jpg"
       },
       {
         "name": "National Textile Museum",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/11/fb/e3/1e/caption.jpg"
       },
       {
         "name": "Galeri Petronas",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0d/c6/9d/cf/an-inside-view-of-the.jpg"
       },
       {
         "name": "National Visual Arts Gallery",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/09/a3/a5/7b/national-art-gallery.jpg"
       },
       {
         "name": "Dialogue in the Dark Experiential Learning Centre",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/15/37/f7/2a/dialogue-in-the-dark.jpg"
       },
       {
         "name": "The Royal Museum (Old Istana Negara)",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0f/b2/80/a3/the-palace-building-seen.jpg"
       },
       {
         "name": "Ilham Gallery",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0e/54/50/d4/ilham-display-1.jpg"
       },
       {
         "name": "Muzium Telekom",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0e/92/ad/c6/caption.jpg"
       },
       {
         "name": "Orang Asli Craft Museum",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/0a/13/02/61/20160118-150233-largejpg.jpg"
       },
       {
         "name": "National Science Center",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/01/71/80/b7/national-science-center.jpg"
       },
       {
         "name": "National Planetarium",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/05/ed/ca/c3/national-planetarium.jpg"
       },
       {
         "name": "Illusion 3D Art Museum",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/13/5b/be/b2/i-save-you.jpg"
       },
       {
         "name": "Tun Abdul Razak Memorial",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/10/bd/08/33/tun-abdul-razak-memorial.jpg"
       },
       {
         "name": "Wei-Ling Contemporary",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0d/39/35/95/cage-of-deliverance-rajinder.jpg"
       },
       {
         "name": "Lost In China Town",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/1a/27/73/2b/lost-in-chinatown-kuala.jpg"
       },
       {
         "name": "Marvel Studios Ten Years of Heroes Malaysia",
-        "url": ""
+        "url": "https://static.tacdn.com/img2/social/no_photo_attraction.gif"
       },
       {
         "name": "Museum of Asian Art",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/11/ac/db/a3/the-entrance-to-the-museum.jpg"
       },
       {
         "name": "Art House Gallery Museum of Ethnic Arts",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/14/f6/af/37/img-20181007-105459-hdr.jpg"
       },
       {
         "name": "Malaysia Cartoon & Comic House",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/10/c4/1d/50/malaysia-cartoon-comic.jpg"
       },
       {
         "name": "Tunku Abdul Rahman Putra Memorial",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/0b/51/da/a3/tunku-abdul-rahman-putra.jpg"
       },
       {
         "name": "Selfie Museum KL",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/17/6e/6d/98/selfie-museum-kl.jpg"
       },
       {
         "name": "Museum of Malay-World Ethnology",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/11/90/df/5a/museum-of-malay-world.jpg"
       },
       {
         "name": "Si Yuang Gallery",
-        "url": ""
+        "url": "https://static.tacdn.com/img2/social/no_photo_attraction.gif"
       },
       {
         "name": "Royal Malaysian Air Force Museum",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/09/c2/dc/80/royal-malaysian-air-force.jpg"
       }
     ],
-    "Shopping": [
+    "Shopping (Malls, Shopping Center)": [
       {
         "name": "Pavilion KL",
         "url": "https://media-cdn.tripadvisor.com/media/photo-f/13/7a/6e/a9/pavilion-kl-s-facade.jpg"
@@ -1096,103 +1235,103 @@
       },
       {
         "name": "SOGO",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0a/cc/c6/d2/main-entrance-of-kl-sogo.jpg"
       },
       {
         "name": "Berjaya Times Square Kuala Lumpur",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/01/41/6d/65/berjaya-times-square.jpg"
       },
       {
         "name": "Central Market Kuala Lumpur",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/10/8d/e3/e9/caption.jpg"
       },
       {
         "name": "Sunway Putra Mall",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0e/5b/51/c1/sunway-putra-mall-from.jpg"
       },
       {
         "name": "Kinokuniya Book Stores",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0c/ac/65/44/outstanding-customer.jpg"
       },
       {
         "name": "Avenue K Shopping Mall",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0d/3e/56/67/avenue-k-with-h-m.jpg"
       },
       {
         "name": "Low Yat Plaza",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/04/18/1d/89/low-yat-plaza.jpg"
       },
       {
         "name": "Sungei Wang",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/1a/3a/b6/56/new-sungei-wang.jpg"
       },
       {
         "name": "Sunway Velocity Mall",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/13/22/1d/1b/sunway-velocity-mall.jpg"
       },
       {
         "name": "Lot 10 Shopping Centre",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/11/c8/f1/a9/atrium-of-lot-10-shopping.jpg"
       },
       {
         "name": "Fahrenheit88",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/13/3f/4f/dc/fahrenheit-88.jpg"
       },
       {
         "name": "MyTOWN Shopping Centre",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/17/0a/ca/c1/photo-credit-raymond.jpg"
       },
       {
         "name": "Quill City Mall",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/08/ca/9c/1e/quill-city-mall.jpg"
       },
       {
         "name": "Great Eastern Mall",
-        "url": ""
+        "url": "https://static.tacdn.com/img2/social/no_photo_attraction.gif"
       },
       {
         "name": "Pudu Plaza",
-        "url": ""
+        "url": "https://static.tacdn.com/img2/social/no_photo_attraction.gif"
       },
       {
         "name": "The Sphere",
-        "url": ""
+        "url": "https://static.tacdn.com/img2/social/no_photo_attraction.gif"
       },
       {
         "name": "Bangsar Shopping Centre",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/14/35/eb/dc/20180819-200201-largejpg.jpg"
       },
       {
         "name": "Bangsar Village 2 Shopping Mall",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0c/fe/11/00/20160916-131046-largejpg.jpg"
       },
       {
         "name": "The Intermark Mall",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0d/b1/58/47/photo0jpg.jpg"
       },
       {
         "name": "Melawati Mall",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/10/4f/d6/d6/melawati-mall.jpg"
       },
       {
         "name": "Semua House",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/0b/21/e3/a9/20160506-170848-largejpg.jpg"
       },
       {
         "name": "The LINC",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/16/fe/ef/1f/20190330-114252-largejpg.jpg"
       },
       {
         "name": "Wangsa Walk Mall",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0d/bd/51/87/wangsa-walk-mall.jpg"
       },
       {
         "name": "1 Mont' Kiara",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0f/50/ff/99/1-mont-kiara-shopping.jpg"
       },
       {
         "name": "Ampang Park Shopping Centre",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0d/c5/d5/b8/caption.jpg"
       }
     ],
     "Landmarks": [
@@ -1218,108 +1357,108 @@
       },
       {
         "name": "Lake Symphony",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/09/aa/56/13/lake-symphony.jpg"
       },
       {
         "name": "Jamek Mosque",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/11/c8/ff/16/jamek-mosque.jpg"
       },
       {
         "name": "Rumah Penghulu Abu Seman",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/10/10/7b/08/traditioneel-huis.jpg"
       },
       {
         "name": "National Mosque (Masjid Negara)",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/16/15/d3/d7/national-mosque-masjid.jpg"
       },
       {
         "name": "Menara Kuala Lumpur",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/05/4c/7e/d2/caption.jpg"
       },
       {
         "name": "Kuala Lumpur City Gallery",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/09/97/d1/d0/kuala-lumpur-city-gallery.jpg"
       },
       {
         "name": "Sri Maha Mariamman Temple",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/09/ee/ea/01/sri-maha-mariamman-temple.jpg"
       },
       {
         "name": "Jalan Alor",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/09/dd/72/22/jalan-alor.jpg"
       },
       {
         "name": "Sin Sze Si Ya Temple",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/11/7f/4e/f7/sin-sze-si-ya-temple.jpg"
       },
       {
         "name": "Kuala Lumpur Sentral Railway Station",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/09/dd/6b/bd/photo0jpg.jpg"
       },
       {
         "name": "Malayan Railways Limited Building",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0e/48/4f/1a/caption.jpg"
       },
       {
         "name": "National Monument",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0d/a4/1e/16/fb-img-1479325371096.jpg"
       },
       {
         "name": "Jalan Masjid India",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/07/db/03/09/jalan-masjid-india.jpg"
       },
       {
         "name": "Bintang Walk",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/02/31/08/c9/fish-spa.jpg"
       },
       {
         "name": "Central Market Kuala Lumpur",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/10/8d/e3/e9/caption.jpg"
       },
       {
         "name": "Malayan Railway Administration Building",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/11/73/50/60/railway-station-and-administra.jpg"
       },
       {
         "name": "Jalan Tuanku Abdul Rahman",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/12/2a/6a/40/colorful-historical-buildings.jpg"
       },
       {
         "name": "Merdeka Square",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/0e/16/49/96/caption.jpg"
       },
       {
         "name": "Guan Di Temple Kuala Lumpur Malaysia",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0f/07/ab/9a/caption.jpg"
       },
       {
         "name": "Istana Negara",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-f/11/fe/87/04/istana-negara.jpg"
       },
       {
         "name": "Sky Deck KL Tower",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/1a/36/0c/30/img-20191128-115838-largejpg.jpg"
       },
       {
         "name": "Little India Brickfields",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/12/6d/a4/ff/little-india-calle-principal.jpg"
       },
       {
         "name": "Chinatown",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-s/09/64/79/9b/p-20150821-155916-largejpg.jpg"
       },
       {
         "name": "The River of Life",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/14/67/2d/bd/caption.jpg"
       },
       {
         "name": "Masjid As-Syakirin",
-        "url": ""
+        "url": "https://media-cdn.tripadvisor.com/media/photo-i/0f/0c/aa/0f/fb-img-1492851458511.jpg"
       }
     ]
   },
   "Bangkok": {
-    "Nature&Parks": [
+    "Nature (Mountains, Lakes, Rivers)": [
       {
         "name": "King Rama IX Park",
         "url": "https://media-cdn.tripadvisor.com/media/photo-f/16/ee/67/ec/caption.jpg"
@@ -1563,7 +1702,7 @@
         "url": "https://media-cdn.tripadvisor.com/media/photo-i/12/92/c5/a5/caption.jpg"
       }
     ],
-    "Shopping": [
+    "Shopping (Malls, Shopping Center)": [
       {
         "name": "MBK Center (Ma Boon Khrong Center)",
         "url": "https://media-cdn.tripadvisor.com/media/photo-f/0a/ad/86/2a/mbk-shopping-mall.jpg"
@@ -1809,7 +1948,7 @@
     ]
   },
   "New York": {
-    "Nature&Parks": [
+    "Nature (Mountains, Lakes, Rivers)": [
       {
         "name": "Central Park",
         "url": "https://media-cdn.tripadvisor.com/media/photo-f/0e/16/1a/e6/new-york-city-central.jpg"
@@ -2053,7 +2192,7 @@
         "url": "https://media-cdn.tripadvisor.com/media/photo-s/0a/76/d0/e0/museum-of-sex.jpg"
       }
     ],
-    "Shopping": [
+    "Shopping (Malls, Shopping Center)": [
       {
         "name": "Brookfield Place",
         "url": "https://media-cdn.tripadvisor.com/media/photo-f/18/c4/ca/3d/the-winter-garden-at.jpg"
