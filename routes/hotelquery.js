@@ -16,6 +16,8 @@ router.route("/").post((req, res) => {
   axios.get(url, { headers }).then(result => {
     const finalDestinationId =
       result.data.suggestions[0].entities[1].destinationId;
+    console.log(result.data);
+    console.log(finalDestinationId);
     const urlFinalQuery = `https://hotels4.p.rapidapi.com/properties/list?destinationId=${finalDestinationId}&type=CITY&pageNumber=1&pageSize=75&adults1=1&checkIn=${dateCheckIn}&checkOut=${dateCheckOut}`;
     const profresURL = `http://localhost:5000/profres/getprofres`;
     const profresPromise = axios.post(profresURL, { user });
