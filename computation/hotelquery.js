@@ -57,11 +57,12 @@ const name = (data, userAnswer) => {
       distanceFromCity,
       distanceFromAirport,
       starRating,
-      userRating
+      userRating,
+      results[i].thumbnailUrl
     ]);
   }
 
-  console.log(hotelList);
+  // console.log(hotelList);
   hotelList.map(el => {
     el[1] = normalize(el[1], minDistanceFromCity, maxDistanceFromCity);
     el[2] = normalize(el[1], minDistanceFromAirport, maxDistanceFromAirport);
@@ -70,15 +71,15 @@ const name = (data, userAnswer) => {
   var hotelReccomendation = [];
 
   for (let el of hotelList) {
-    hotelReccomendation.push([el[0], calcPoint(el, userAnswer)]);
+    hotelReccomendation.push([el[0], calcPoint(el, userAnswer), el[5]]);
   }
 
   hotelReccomendation.sort((a, b) => {
     return b[1] - a[1];
   });
-  for (let i = 0; i < 10; i++) {
-    console.log(hotelReccomendation[i]);
-  }
+  // for (let i = 0; i < 10; i++) {
+  //   console.log(hotelReccomendation[i]);
+  // }
   return hotelReccomendation.slice(0, 10);
 };
 
