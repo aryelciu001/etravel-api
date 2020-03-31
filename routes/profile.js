@@ -126,8 +126,7 @@ router.route("/add").post((req, res) => {
   const cleanPassword = req.body.password;
   bcrypt.hash(cleanPassword, saltRounds).then(hashedPassword => {
     password = hashedPassword;
-    Profile.find({ name }).then(result => {
-      console.log(result);
+    Profile.find({ email }).then(result => {
       if (result.length === 0) {
         const newProfile = new Profile({
           name,
@@ -145,9 +144,9 @@ router.route("/add").post((req, res) => {
               .then(() => {
                 return res.send({ err: "", stat: "User saved" });
               })
-              .catch(err => res.status(400).json("Error: " + err));
+              .catch(err => res.send({ err }));
           })
-          .catch(err => res.status(400).json("Error: " + err));
+          .catch(err => res.send({ err }));
       } else {
         res.send({ err: "User exists!", stat: "" });
       }
