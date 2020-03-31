@@ -8,6 +8,7 @@ router.route("/").post((req, res) => {
   const dateOfReturn = req.body.returnDate; // YYYY-MM-DD
   const sourceCityUrlRequest = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/US/USD/en-US/?query=${sourceCity}`;
   const destinationCityUrlRequest = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/US/USD/en-US/?query=${destinationCity}`;
+
   const headers = {
     "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
     "x-rapidapi-key": "a73b75f34dmsha28cc2ab4d28bffp17ea54jsn1d9d7b1ca033"
@@ -19,10 +20,28 @@ router.route("/").post((req, res) => {
   Promise.all([promise1, promise2]).then(result => {
     const sourceId = result[0].data.Places[0].CityId;
     const destinationId = result[1].data.Places[0].CityId;
-    const finalQueryUrl = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/${sourceId}/${destinationId}/${dateOfDeparture}?inboundpartialdate=${dateOfReturn}`;
-    axios.get(finalQueryUrl, { headers }).then(finalResult => {
-      res.send(finalResult.data);
-    });
+
+    const departureFlightQueryUrl = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/${sourceId}/${destinationId}/${dateOfDeparture}`;
+    const returnFlightQueryUrl = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/${destinationId}/${sourceId}/${dateOfReturn}`;
+
+    var departurePromise = axios.get(departureFlightQueryUrl, { headers });
+    var returnPromise = axios.get(returnFlightQueryUrl, { headers });
+
+    Promise.all( [departurePromise, returnPromise]).then(result => {
+      var finResult = {
+        departure: result[0].data,
+        return: result[1].data
+      }
+      res.send(finResult)
+      // const departureFlight = result[0];
+      // res.send(departureFlight.data);
+      // console.log("Departure Flight : ")
+      // console.log(departureFlight.data);
+      // const returnFlight = result[1];
+      // res.send(returnFlight.data);
+      // console.log("Return Flight : ");
+      // console.log(returnFlight.data);
+    })
   });
 });
 

@@ -13,10 +13,12 @@ router.route("/").post((req, res) => {
     "x-rapidapi-key": "a73b75f34dmsha28cc2ab4d28bffp17ea54jsn1d9d7b1ca033"
   };
   axios.get(url, { headers }).then(result => {
-    const finalDestinationId =
-      result.data.suggestions[0].entities[1].destinationId;
+    const finalDestinationId = result.data.suggestions[0].entities[1].destinationId;
+    console.log(result.data);
+    console.log(finalDestinationId);
     const urlFinalQuery = `https://hotels4.p.rapidapi.com/properties/list?destinationId=${finalDestinationId}&type=CITY&pageNumber=1&pageSize=75&adults1=1&checkIn=${dateCheckIn}&checkOut=${dateCheckOut}`;
     axios.get(urlFinalQuery, { headers }).then(finalResult => {
+        console.log(finalResult.data);
         const finalAnswer = name(finalResult.data);
         res.send(finalAnswer);
     });
