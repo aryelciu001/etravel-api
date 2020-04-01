@@ -8,23 +8,24 @@ module.exports = function(flightData) {
   //added price
   var usedRoutes = {};
   var outbound;
-  var InboundLegIdound;
 
   for (let package of packages) {
-    if (usedRoutes["OutboundLegId"] === undefined) {
+    var id = package["OutboundLegId"];
+    if (usedRoutes[id] === undefined) {
       outbound = routes.filter(el => el["Id"] === package["OutboundLegId"])[0];
-      usedRoutes["OutboundLegId"] = outbound;
+      usedRoutes[id] = outbound;
     } else {
-      outbound = usedRoutes["OutboundLegId"];
+      outbound = usedRoutes[id];
     }
     delete outbound["Id"];
     package["Outbound"] = { ...outbound };
 
-    if (usedRoutes["InboundLegId"] === undefined) {
+    id = package["InboundLegId"];
+    if (usedRoutes[id] === undefined) {
       inbound = routes.filter(el => el["Id"] === package["InboundLegId"])[0];
-      usedRoutes["InboundLegId"] = inbound;
+      usedRoutes[id] = inbound;
     } else {
-      inbound = usedRoutes["InboundLegId"];
+      inbound = usedRoutes[id];
     }
     delete inbound["Id"];
     package["Inbound"] = { ...inbound };
