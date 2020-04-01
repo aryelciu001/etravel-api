@@ -1,64 +1,88 @@
 const router = require("express").Router();
 const axios = require("axios");
 
-router.route("/").post((req, res) =>{
+router.route("/").post((req, res) => {
   const sourceCity = req.body.source;
-  const destinationCity = req.body.destination;               // must be city
-  const dateOfDeparture = req.body.departureDate;             // YYYY-MM-DD
-  const dateOfReturn = req.body.returnDate;                   // YYYY-MM-DD
+  const destinationCity = req.body.destination; // must be city
+  const dateOfDeparture = req.body.departureDate; // YYYY-MM-DD
+  const dateOfReturn = req.body.returnDate; // YYYY-MM-DD
 
-
-  const getSessionKeyUrl = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/pricing/v1.0`;
-  const headers2 = {
+  const getSessionKeyUrl =
+    "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/pricing/v1.0";
+  const headers = {
     "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
     "x-rapidapi-key": "a73b75f34dmsha28cc2ab4d28bffp17ea54jsn1d9d7b1ca033",
-    "content-type": "application/x-www-form-urlencoded"
+    "Content-Type": "application/x-www-form-urlencoded"
   };
 
-  // const headers2 = {
+  const bodyForOutbound = {
+    cabinClass: "Economy",
+    children: "0",
+    infants: "0",
+    country: "US",
+    currency: "USD",
+    locale: "en-US",
+    originPlace: "SFO-sky",
+    destinationPlace: "LHR-sky",
+    outboundDate: "2020-09-01",
+    inboundDate: "2020-09-10",
+    adults: "1"
+  };
+
+  const bodyForInbound = {
+    country: "SG",
+    locale: "en-SG",
+    originPlace: "SIN-sky",
+    destination: "CGK-sky",
+    outboundDate: dateOfReturn
+  };
+
+  axios
+    .post(getSessionKeyUrl, JSON.stringify(bodyForOutbound), { headers })
+    .then(response => res.send(response))
+    .catch(err => res.send(err));
+
+  // const sourceCityUrlRequest = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/US/USD/en-US/?query=${sourceCity}`;
+  // const destinationCityUrlRequest = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/US/USD/en-US/?query=${destinationCity}`;
+  // const headers = {
   //   "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
   //   "x-rapidapi-key": "a73b75f34dmsha28cc2ab4d28bffp17ea54jsn1d9d7b1ca033"
   // };
 
-  const sourceCityUrlRequest = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/US/USD/en-US/?query=${sourceCity}`;
-  const destinationCityUrlRequest = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/US/USD/en-US/?query=${destinationCity}`;
-  const headers = ({
-    "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-    "x-rapidapi-key": "a73b75f34dmsha28cc2ab4d28bffp17ea54jsn1d9d7b1ca033"
-  });
+  // var promise1 = axios.get(sourceCityUrlRequest, { headers }).then(result => {
+  //   res.send(result.data);
+  // });
+  // var promise2 = axios.get(destinationCityUrlRequest, { headers });
 
-  var promise1 = axios.get(sourceCityUrlRequest, {headers});
-  var promise2 = axios.get(destinationCityUrlRequest, {headers});
-
-  Promise.all([promise1, promise2]).then ((result) =>{
-    const sourceId = result[0].data.Places[0].CityId;
-    const destinationId = result[1].data.Places[0].CityId;
-    var postData = {
-      country: "US",
-      currency: "USD",
-      locale: "en-US",
-      originPlace: sourceId,
-      destinationPlace: destinationId,
-      outboundDate: dateOfDeparture,
-    }
-    console.log(sourceId, destinationId);
-    axios.post(getSessionKeyUrl, postData,{ headers }).then((result2) => {
-      console.log(result2);
-      var responseHeader = result2.headers.Location;
-      console.log(responseHeader);
-      var key = responseHeader.split("/");
-      key = key.pop();
-      const flightQueryUrl = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/pricing/v1.0/${key}`;
-      var requestBody = {
-        sessionkey: key,
-      }
-      axios.get(flightQueryUrl, requestBody, { headers }).then((result3) => {
-        res.send(result3.data);
-      })
-    }).catch(function (error) {
-      console.log(error);
-    });
-  })
+  // Promise.all([promise1, promise2]).then ((result) =>{
+  //   const sourceId = result[0].data.Places[0].CityId;
+  //   const destinationId = result[1].data.Places[0].CityId;
+  //   var postData = {
+  //     country: "US",
+  //     currency: "USD",
+  //     locale: "en-US",
+  //     originPlace: sourceId,
+  //     destinationPlace: destinationId,
+  //     outboundDate: dateOfDeparture,
+  //   }
+  //   console.log(sourceId, destinationId);
+  //   axios.post(getSessionKeyUrl, postData,{ headers }).then((result2) => {
+  //     console.log(result2);
+  //     var responseHeader = result2.headers.Location;
+  //     console.log(responseHeader);
+  //     var key = responseHeader.split("/");
+  //     key = key.pop();
+  //     const flightQueryUrl = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/pricing/v1.0/${key}`;
+  //     var requestBody = {
+  //       sessionkey: key,
+  //     }
+  //     axios.get(flightQueryUrl, requestBody, { headers }).then((result3) => {
+  //       res.send(result3.data);
+  //     })
+  //   }).catch(function (error) {
+  //     console.log(error);
+  //   });
+  // })
 
   // Promise.all([promise1, promise2]).then((result) => {
   //   console.log(result);
@@ -70,9 +94,6 @@ router.route("/").post((req, res) =>{
 
   //     })
   // })
-
-
-
 
   // const headers  = ({
   //   "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
@@ -88,6 +109,6 @@ router.route("/").post((req, res) =>{
   //     res.send(finalResult.data);
   //   })
   // })
-})
+});
 
 module.exports = router;
