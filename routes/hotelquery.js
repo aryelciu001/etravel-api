@@ -4,10 +4,10 @@ const axios = require("axios");
 const name = require("../computation/hotelquery");
 
 router.route("/").post((req, res) => {
-  const user = req.body.user;
-  const destinationCity = req.body.destination; // must be city
-  const dateCheckIn = req.body.dateCheckIn; // YYYY-MM-DD
-  const dateCheckOut = req.body.dateCheckOut; // YYYY-MM-DD
+  const user = req.body.user;                       // userId
+  const destinationCity = req.body.destination;     // must be city
+  const dateCheckIn = req.body.dateCheckIn;         // YYYY-MM-DD
+  const dateCheckOut = req.body.dateCheckOut;       // YYYY-MM-DD
   const url = `https://hotels4.p.rapidapi.com/locations/search?locale=en_US&query=${destinationCity}`;
   const headers = {
     "x-rapidapi-host": "hotels4.p.rapidapi.com",
@@ -33,6 +33,7 @@ router.route("/").post((req, res) => {
         const hotelresPromise = axios.get(urlFinalQuery, { headers });
         Promise.all([profresPromise, hotelresPromise]).then(promiseResult => {
           const finalAnswer = name(promiseResult[1].data, promiseResult[0].data);
+          console.log("Hotel Okay");
           res.send(finalAnswer);
         });
       })

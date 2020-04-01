@@ -50,29 +50,32 @@ function calculateFlightPoint(airlinePriority, preferenceTime, flightData) {
         }
         if (u === "Afternoon") {
           if (hour > 4 && hour < 12) {
-            time_score = (6 - abs(hour + minute + second - 8.5) / 3.5) * 0.6;
+            time_score =
+              (6 - Math.abs(hour + minute + second - 8.5) / 3.5) * 0.6;
           } else if (hour > 11 && hour < 18) {
-            time_score = 6 - abs(hour + minute + second - 15) / 3;
+            time_score = 6 - Math.abs(hour + minute + second - 15) / 3;
           } else if (hour > 17 && hour < 5) {
             if (hour < 5) hour += 24;
-            time_score = (6 - abs(hour + minute + second - 23.5) / 5.5) * 0.6;
+            time_score =
+              (6 - Math.abs(hour + minute + second - 23.5) / 5.5) * 0.6;
           }
         }
         if (u === "Evening/Night") {
           if (hour > 4 && hour < 12) {
-            time_score = (6 - abs(hour + minute + second - 8.5) / 3.5) * 0.5;
+            time_score =
+              (6 - Math.abs(hour + minute + second - 8.5) / 3.5) * 0.5;
           } else if (hour > 11 && hour < 18) {
-            time_score = (6 - abs(hour + minute + second - 15) / 3) * 0.7;
+            time_score = (6 - Math.abs(hour + minute + second - 15) / 3) * 0.7;
           } else if (hour > 17 && hour < 5) {
             if (hour < 5) hour += 24;
-            time_score = 6 - abs(hour + minute + second - 23.5) / 5.5;
+            time_score = 6 - Math.abs(hour + minute + second - 23.5) / 5.5;
           }
         }
       }
       numIteration++;
       totalPointOutbound += timeScore * (1 + multiplier);
     }
-    flightDataOutbound.append([iteration, totalPointOutbound / numIteration]);
+    flightDataOutbound.push([iteration, totalPointOutbound / numIteration]);
     iteration++;
   }
 
@@ -88,7 +91,7 @@ function calculateFlightPoint(airlinePriority, preferenceTime, flightData) {
       for (let u of airlinePriority) {
         if (multiplier === 0.2) {
           for (let v of flightClass[u]) {
-            var convertName = "".join(airlineName.split(" "));
+            var convertName = airlineName.split(" ").join("");
             if (convertName.toLowerCase().includes(v.toLowerCase())) {
               multiplier = flightClassMultiplier[index];
               break;
@@ -116,29 +119,32 @@ function calculateFlightPoint(airlinePriority, preferenceTime, flightData) {
         }
         if (u === "Afternoon") {
           if (hour > 4 && hour < 12) {
-            time_score = (6 - abs(hour + minute + second - 8.5) / 3.5) * 0.6;
+            time_score =
+              (6 - Math.abs(hour + minute + second - 8.5) / 3.5) * 0.6;
           } else if (hour > 11 && hour < 18) {
-            time_score = 6 - abs(hour + minute + second - 15) / 3;
+            time_score = 6 - Math.abs(hour + minute + second - 15) / 3;
           } else if (hour > 17 && hour < 5) {
             if (hour < 5) hour += 24;
-            time_score = (6 - abs(hour + minute + second - 23.5) / 5.5) * 0.6;
+            time_score =
+              (6 - Math.abs(hour + minute + second - 23.5) / 5.5) * 0.6;
           }
         }
         if (u === "Evening/Night") {
           if (hour > 4 && hour < 12) {
-            time_score = (6 - abs(hour + minute + second - 8.5) / 3.5) * 0.5;
+            time_score =
+              (6 - Math.abs(hour + minute + second - 8.5) / 3.5) * 0.5;
           } else if (hour > 11 && hour < 18) {
-            time_score = (6 - abs(hour + minute + second - 15) / 3) * 0.7;
+            time_score = (6 - Math.abs(hour + minute + second - 15) / 3) * 0.7;
           } else if (hour > 17 && hour < 5) {
             if (hour < 5) hour += 24;
-            time_score = 6 - abs(hour + minute + second - 23.5) / 5.5;
+            time_score = 6 - Math.abs(hour + minute + second - 23.5) / 5.5;
           }
         }
       }
       numIteration++;
       totalPointInbound += timeScore * (1 + multiplier);
     }
-    flightDataInbound.append([iteration, totalPointInbound / numIteration]);
+    flightDataInbound.push([iteration, totalPointInbound / numIteration]);
     iteration++;
   }
   for (let i = 0; i < flightDataInbound.length; i++) {
@@ -150,3 +156,5 @@ function calculateFlightPoint(airlinePriority, preferenceTime, flightData) {
   });
   return flightData;
 }
+
+module.exports = flightQuery;
