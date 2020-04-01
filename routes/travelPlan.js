@@ -1,6 +1,5 @@
 const router = require("express").Router();
 const axios = require("axios");
-const flightDataCleaner = require("../computation/cleanFlightData");
 
 router.route("/").post((req, res) => {
   const user = req.body.user;
@@ -14,6 +13,7 @@ router.route("/").post((req, res) => {
   const profilingResultQuery = `http://localhost:5000/profres/getprofres`;
 
   var promise1 = axios.post(flightQueryUrl, {
+    user: user,
     source: sourceCity,
     destination: destinationCity,
     departureDate: dateOfDeparture,
@@ -33,19 +33,16 @@ router.route("/").post((req, res) => {
     //all the data of the flight retrieved from flight query , including price, direct, airline
     // const flightResult = result[0].data;
     if (!result[0].data.err) {
-      var flightResult = result[0].data.data;
+      var flightResult = result[0].data;
     }
 
     //all the data of the hotels retrieved from hotel query, including name, thumbnail
-    var hotelResults = result[1].data;
+    var hotelResult = result[1].data;
 
-    //all the data of the itinerary retrieved from itinierary query, including name, thumbnail
+    //profiling result of user
     var profilingResult = result[2].data.itinerary;
+    console.log(profilingResult);
 
-    //all the flight inbound and outbound and price
-    var flightData = flightDataCleaner(flightResult);
-
-    //Ini apaan?
     const itineraryAnswerUrl = `http://localhost:5000/itineraryquery`;
 
     axios
@@ -58,17 +55,16 @@ router.route("/").post((req, res) => {
         for (let i = 4; i > 0; i--) {
           for (let j = 0; j < i; j++) {
             finalItinerary.push(
-              itineraryAnswer[itineraryResult[4 - i]].shift()
+              itineraryAnswer[profilingResult[4 - i]].shift()
             );
           }
         }
 
         var finalResults = [];
         for (let i = 0; i < 10; i++) {
-          var hotelResult = hotelResults[i];
           var finalResult = {
-            flight: { name: airlineName, cost: flightCost },
-            hotel: hotelResult,
+            flight: flightResult[i],
+            hotel: hotelResult[i],
             itinerary: finalItinerary
           };
           finalResults.push(finalResult);

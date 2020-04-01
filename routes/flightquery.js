@@ -1,8 +1,10 @@
 const router = require("express").Router();
 const axios = require("axios");
 const flightDataCleaner = require("../computation/cleanFlightData");
+const flightQuery = require("../computation/weightingFunction");
 
 router.route("/").post((req, res) => {
+  const user = req.body.user;
   const sourceCity = req.body.source;
   const destinationCity = req.body.destination; // must be city
   const dateOfDeparture = req.body.departureDate; // YYYY-MM-DD
@@ -49,14 +51,26 @@ router.route("/").post((req, res) => {
         var responseHeader = result2.headers.location;
         var key = responseHeader.split("/");
         key = key.pop();
+
         const flightQueryUrl = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/pricing/uk2/v1.0/${key}`;
-        axios.get(flightQueryUrl, { headers }).then(result3 => {
-          var flightResult = flightDataCleaner(result3);
+        const profresURL = `http://localhost:5000/profres/getprofres`;
+        const profresPromise = axios.post(profresURL, { user });
+        const flightPromise = axios.get(flightQueryUrl, { headers });
 
-          //TO DO ==> buat jadi 10 flight aja
+        Promise.all([profresPromise, flightPromise]).then(result3 => {
+          var profresResult = result3[0].data;
+          var flightResult = flightDataCleaner(result3[1].data);
 
-          res.send(flightResult);
-        });
+          // console.log(profresResult);
+          // res.send(flightResult);
+
+          var flightAnswerAll = flightQuery(profresResult, flightResult);
+
+          var flightAnswer = flightAnswerAll.slice(0,10);
+          console.log("Flight OK");
+          res.send(flightAnswer);
+
+        })
       })
       .catch(function(error) {
         res.send({ err: true, data: error });
