@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const axios = require("axios");
+const flightDataCleaner = require("../computation/cleanFlightData");
 
 router.route("/").post((req, res) => {
   const sourceCity = req.body.source;
@@ -50,7 +51,11 @@ router.route("/").post((req, res) => {
         key = key.pop();
         const flightQueryUrl = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/pricing/uk2/v1.0/${key}`;
         axios.get(flightQueryUrl, { headers }).then(result3 => {
-          res.send({ err: false, data: result3.data });
+          var flightResult = flightDataCleaner(result3);
+
+          //TO DO ==> buat jadi 10 flight aja
+
+          res.send(flightResult);
         });
       })
       .catch(function(error) {
