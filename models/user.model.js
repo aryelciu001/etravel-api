@@ -6,9 +6,9 @@ const userSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "Profile"
   },
-  profilingTest: {
+  profilingResult: {
     type: Schema.Types.ObjectId,
-    ref: "ProfilingTest"
+    ref: "ProfilingResult"
   },
   history: [
     {

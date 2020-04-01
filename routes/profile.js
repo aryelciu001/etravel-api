@@ -15,60 +15,60 @@ router.get("/afterLogin", verify, (req, res) => {
 });
 
 //update profile
+<<<<<<< HEAD
 router.post("/updateProfile", verify, (req,res) => {
+=======
+router.post("/updateProfile", verify, (req, res) => {
+>>>>>>> 3a47371984fdf42d56046cb6f435ce4fc0cb39d7
   const profileId = req.body.profileId;
-  Profile.find({_id: profileId }).then(profile => {
+  Profile.find({ _id: profileId }).then(profile => {
     profile = profile[0];
     console.log(profile);
     console.log("Current password : ", profile.password);
 
-    if(req.body.newName){
+    if (req.body.newName) {
       profile.name = req.body.newName;
     }
 
-    if(req.body.newEmail){
+    if (req.body.newEmail) {
       profile.email = req.body.newEmail;
     }
 
-    if(req.body.newPhoneNumber){
+    if (req.body.newPhoneNumber) {
       profile.phoneNumber = req.body.newPhoneNumber;
     }
 
-    if(req.body.newCountry){
+    if (req.body.newCountry) {
       profile.country = req.body.newCountry;
     }
 
-    var promises = []
+    var promises = [];
 
-    if(req.body.newPassword && req.body.oldPassword){
-        var promise = bcrypt
-            .compare(req.body.oldPassword, profile.password)
-      promises.push(promise)
+    if (req.body.newPassword && req.body.oldPassword) {
+      var promise = bcrypt.compare(req.body.oldPassword, profile.password);
+      promises.push(promise);
     }
 
-     Promise.all(promises).then((result)=>{
-
-       if(result.length === 0){
-         profile.save();
-         res.send(profile);
-       }
-       else{
-         if(result[0] === true){
-           console.log("Paswword matched")
-           bcrypt.hash(req.body.newPassword, saltRounds).then(hashedPassword => {
-             profile.password = hashedPassword;
-             profile.save()
-             res.send(profile);
-           });
-         }
-         else{
-           console.log("wrong password")
-           res.send("Wrong Password");
-         }
-       }
-     })
-  })
-})
+    Promise.all(promises).then(result => {
+      if (result.length === 0) {
+        profile.save();
+        res.send(profile);
+      } else {
+        if (result[0] === true) {
+          console.log("Paswword matched");
+          bcrypt.hash(req.body.newPassword, saltRounds).then(hashedPassword => {
+            profile.password = hashedPassword;
+            profile.save();
+            res.send(profile);
+          });
+        } else {
+          console.log("wrong password");
+          res.send("Wrong Password");
+        }
+      }
+    });
+  });
+});
 
 //get the profile information
 router.post("/getProfile", verify, (req, res) => {
@@ -78,7 +78,7 @@ router.post("/getProfile", verify, (req, res) => {
   });
 });
 
-//get all users
+//get all profile
 router.route("/").get((req, res) => {
   Profile.find()
     .then(profiles => res.json(profiles))
@@ -87,34 +87,38 @@ router.route("/").get((req, res) => {
 
 //get one user
 router.route("/login").post((req, res) => {
-  Profile.find({ email: req.body.email }).then(profile => {
-    var currentProfile = profile[0];
-    if (currentProfile == null) {
-      return res.status(404).send("Cannot find user");
-    }
-    try {
-      bcrypt
-        .compare(req.body.password, currentProfile.password)
-        .then(function(result) {
-          if (result == true) {
-            User.find({ profile: currentProfile }).then(user => {
-              const token = jwt.sign(
-                { _id: user[0]._id },
-                process.env.TOKEN_SECRET
-              );
-              res.header("auth-token", token);
-              // front end can access this to check whether user logged in or not
+  Profile.find({ email: req.body.email })
+    .then(profile => {
+      if (profile.length === 0) {
+        return res.send({ err: "user not found" });
+      }
+      var currentProfile = profile[0];
+      try {
+        bcrypt
+          .compare(req.body.password, currentProfile.password)
+          .then(function(result) {
+            if (result == true) {
+              User.find({ profile: currentProfile }).then(user => {
+                const token = jwt.sign(
+                  { _id: user[0]._id },
+                  process.env.TOKEN_SECRET
+                );
+                res.header("auth-token", token);
+                // front end can access this to check whether user logged in or not
 
-              res.send(token);
-            });
-          } else {
-            res.status(401).send("Wrong password");
-          }
-        });
-    } catch {
-      res.status(500).send();
-    }
-  });
+                res.send(token);
+              });
+            } else {
+              res.status(401).send("Wrong password");
+            }
+          });
+      } catch (e) {
+        console.log(e);
+      }
+    })
+    .catch(e => {
+      console.log(e);
+    });
 });
 
 //add new profile
@@ -126,9 +130,9 @@ router.route("/add").post((req, res) => {
   const cleanPassword = req.body.password;
   bcrypt.hash(cleanPassword, saltRounds).then(hashedPassword => {
     password = hashedPassword;
-
-    Profile.find({ name }, result => {
-      if (result === null) {
+    Profile.find({ name }).then(result => {
+      console.log(result);
+      if (result.length === 0) {
         const newProfile = new Profile({
           name,
           phoneNumber,
@@ -139,19 +143,17 @@ router.route("/add").post((req, res) => {
         newProfile
           .save()
           .then(newProfile => {
-            res.json("New Profile added !");
-            console.log(newProfile);
             var newuser = new User({ profile: newProfile });
             newuser
               .save()
               .then(() => {
-                console.log("user saved");
+                return res.send({ err: "", stat: "User saved" });
               })
               .catch(err => res.status(400).json("Error: " + err));
           })
           .catch(err => res.status(400).json("Error: " + err));
       } else {
-        res.json("Profile exists!");
+        res.send({ err: "User exists!", stat: "" });
       }
     });
   });
