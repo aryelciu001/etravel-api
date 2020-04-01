@@ -24,7 +24,8 @@ router.route("/").post((req, res) =>{
   const destinationCityUrlRequest = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/US/USD/en-US/?query=${destinationCity}`;
   const headers = ({
     "x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-    "x-rapidapi-key": "a73b75f34dmsha28cc2ab4d28bffp17ea54jsn1d9d7b1ca033"
+    "x-rapidapi-key": "a73b75f34dmsha28cc2ab4d28bffp17ea54jsn1d9d7b1ca033",
+    "content-type": "application/x-www-form-urlencoded"
   });
 
   var promise1 = axios.get(sourceCityUrlRequest, {headers});
@@ -33,26 +34,25 @@ router.route("/").post((req, res) =>{
   Promise.all([promise1, promise2]).then ((result) =>{
     const sourceId = result[0].data.Places[0].CityId;
     const destinationId = result[1].data.Places[0].CityId;
-    var postData = {
+    const querystring = require('querystring');
+    const postData = ({
       country: "US",
       currency: "USD",
       locale: "en-US",
       originPlace: sourceId,
       destinationPlace: destinationId,
       outboundDate: dateOfDeparture,
-    }
+    });
     console.log(sourceId, destinationId);
-    axios.post(getSessionKeyUrl, postData,{ headers }).then((result2) => {
+    axios.post(getSessionKeyUrl, querystring.stringify(postData),{ headers }).then((result2) => {
       console.log(result2);
-      var responseHeader = result2.headers.Location;
+      var responseHeader = result2.headers.location;
       console.log(responseHeader);
       var key = responseHeader.split("/");
       key = key.pop();
-      const flightQueryUrl = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/pricing/v1.0/${key}`;
-      var requestBody = {
-        sessionkey: key,
-      }
-      axios.get(flightQueryUrl, requestBody, { headers }).then((result3) => {
+      const flightQueryUrl = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/pricing/uk2/v1.0/${key}`;
+      console.log(key);
+      axios.get(flightQueryUrl, { headers }).then((result3) => {
         res.send(result3.data);
       })
     }).catch(function (error) {
