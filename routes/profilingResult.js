@@ -8,18 +8,21 @@ router.post("/addprofres", (req, res) => {
   const transit = req.body.transit;
   const flight = req.body.flight;
   const itinerary = req.body.itinerary;
+  const time = req.body.time;
   var newProfRes = new ProfilingResult({
     hotel,
     transit,
     flight,
-    itinerary
+    itinerary,
+    time
   });
   newProfRes.save().then(theProfResult => {
     User.findOne({ _id: req.body.user }).then(user => {
-      user.profilingResult = theProfResult;
+      user.profilingResult = theProfResult["_id"];
       user
         .save()
         .then(() => {
+          console.log();
           res.send({ err: "" });
         })
         .catch(err => {
