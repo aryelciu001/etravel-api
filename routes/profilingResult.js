@@ -20,7 +20,6 @@ router.post("/addprofres", (req, res) => {
       user
         .save()
         .then(() => {
-          console.log("OKAY");
           res.send({ err: "" });
         })
         .catch(err => {

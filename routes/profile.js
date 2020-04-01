@@ -19,8 +19,6 @@ router.post("/updateProfile", verify, (req, res) => {
   const profileId = req.body.profileId;
   Profile.find({ _id: profileId }).then(profile => {
     profile = profile[0];
-    console.log(profile);
-    console.log("Current password : ", profile.password);
 
     if (req.body.newName) {
       profile.name = req.body.newName;
@@ -51,14 +49,12 @@ router.post("/updateProfile", verify, (req, res) => {
         res.send(profile);
       } else {
         if (result[0] === true) {
-          console.log("Paswword matched");
           bcrypt.hash(req.body.newPassword, saltRounds).then(hashedPassword => {
             profile.password = hashedPassword;
             profile.save();
             res.send(profile);
           });
         } else {
-          console.log("wrong password");
           res.send("Wrong Password");
         }
       }
@@ -108,13 +104,9 @@ router.route("/login").post((req, res) => {
               res.status(401).send("Wrong password");
             }
           });
-      } catch (e) {
-        console.log(e);
-      }
+      } catch (e) {}
     })
-    .catch(e => {
-      console.log(e);
-    });
+    .catch(e => {});
 });
 
 //add new profile
