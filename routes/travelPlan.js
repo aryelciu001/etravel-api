@@ -53,23 +53,35 @@ router.route("/").post((req, res) => {
 
     const itineraryAnswerUrl = `http://localhost:5000/itineraryquery`;
 
+
     axios
       .post(itineraryAnswerUrl, {
         city: destinationCity
       })
       .then(result => {
         let itineraryAnswer = result.data;
-        var finalItinerary = [];
-        for (let i = 4; i > 0; i--) {
-          for (let j = 0; j < i; j++) {
-            finalItinerary.push(
-              itineraryAnswer[profilingResult[4 - i]].shift()
-            );
-          }
-        }
+        let counter = 0;
 
         var finalResults = [];
         for (let i = 0; i < 10; i++) {
+          var arr = [];
+          while(arr.length < 10){
+            var generatedNumber = parseInt(Math.random() * 15);
+            if (arr.indexOf(generatedNumber) === -1){
+              arr.push(generatedNumber)
+            }
+          }
+
+          var finalItinerary = [];
+          counter=0;
+          for (let i = 4; i > 0; i--) {
+            for (let j = 0; j < i; j++) {
+              finalItinerary.push(
+                  itineraryAnswer[profilingResult[4 - i]][arr[counter]]
+              );
+              counter++;
+            }
+          }
           var finalResult = {
             flight: flightResult[i],
             hotel: hotelResult[i],
@@ -77,7 +89,6 @@ router.route("/").post((req, res) => {
           };
           finalResults.push(finalResult);
         }
-
         res.send(finalResults);
       });
   });
