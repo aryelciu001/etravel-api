@@ -1,4 +1,16 @@
-ETRAVEL BACKEND CODE
+# ETRAVEL
 
-after cloning -> run "npm install"
-to start server -> run "npm run start-server"
+## Overview
+
+Etravel is an application to help users find their preferred destination and itinerary with one simple click. The users preference will be captured once users sign up to the application and fill up the profiling test.
+
+## Installation
+
+```bash
+npm install
+```
+
+## Usage
+
+```
+npm start
