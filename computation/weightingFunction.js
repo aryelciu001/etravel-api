@@ -9,18 +9,18 @@ function flightQuery(profilingResult, flightData) {
 }
 
 function calculateFlightPoint(airlinePriority, preferenceTime, flightData) {
-  flightClassMultiplier = [0.5, 0.35, 0.2];
+  flightClassMultiplier = [1.5, 0.8, 0.6];
   var flightDataOutbound = [];
   var iteration = 0;
   for (let i of flightData) {
     var numIteration = 0;
     var totalPointOutbound = 0;
     for (let j of i["Outbound"]["flights"]) {
-      var multiplier = 0.2;
+      var multiplier = 0.6;
       var airlineName = j["Carrier"]["Name"];
       var index = 0;
       for (let u of airlinePriority) {
-        if (multiplier === 0.2) {
+        if (multiplier === 0.6) {
           for (let v of flightClass[u]) {
             var convertName = airlineName.split(" ").join("");
             if (convertName.toLowerCase().includes(v.toLowerCase())) {
@@ -36,44 +36,31 @@ function calculateFlightPoint(airlinePriority, preferenceTime, flightData) {
       var minute = Number(departureTime[1]) / 60;
       var second = Number(departureTime[2]) / 3600;
 
-      for (let u of preferenceTime) {
-        if (u === "Morning") {
-          if (hour > 4 && hour < 12) {
-            var timeScore = 6 - Math.abs(hour + minute + second - 8.5) / 3.5;
-          } else if (hour > 11 && hour < 18) {
-            timeScore = (6 - Math.abs(hour + minute + second - 15) / 3) * 0.7;
-          } else if (hour > 17 && hour < 5) {
-            if (hour < 5) hour += 24;
-            timeScore =
-              (6 - Math.abs(hour + minute + second - 23.5) / 5.5) * 0.5;
-          }
+      var timeMultiplier = [1, 0.8, 0.5]
+
+      var our_time;
+
+      if (hour > 4 && hour < 12) {
+        var timeScore = 5 - Math.abs(hour + minute + second - 8.5) / 3.5;
+        our_time = "Morning";
+      } else if (hour > 11 && hour < 18) {
+        timeScore = (5 - Math.abs(hour + minute + second - 15) / 3);
+        our_time = "Afternoon";
+      } else if (hour > 17 || hour < 5) {
+        if (hour < 5) hour += 24;
+        timeScore = (5 - Math.abs(hour + minute + second - 23.5) / 5.5);
+        our_time = "Evening/Night";
+      }
+
+      var idx = 0;
+      for(let u of preferenceTime){
+        if (u === our_time){
+          timeScore = timeScore*timeMultiplier[idx];
         }
-        if (u === "Afternoon") {
-          if (hour > 4 && hour < 12) {
-            time_score =
-              (6 - Math.abs(hour + minute + second - 8.5) / 3.5) * 0.6;
-          } else if (hour > 11 && hour < 18) {
-            time_score = 6 - Math.abs(hour + minute + second - 15) / 3;
-          } else if (hour > 17 && hour < 5) {
-            if (hour < 5) hour += 24;
-            time_score =
-              (6 - Math.abs(hour + minute + second - 23.5) / 5.5) * 0.6;
-          }
-        }
-        if (u === "Evening/Night") {
-          if (hour > 4 && hour < 12) {
-            time_score =
-              (6 - Math.abs(hour + minute + second - 8.5) / 3.5) * 0.5;
-          } else if (hour > 11 && hour < 18) {
-            time_score = (6 - Math.abs(hour + minute + second - 15) / 3) * 0.7;
-          } else if (hour > 17 && hour < 5) {
-            if (hour < 5) hour += 24;
-            time_score = 6 - Math.abs(hour + minute + second - 23.5) / 5.5;
-          }
-        }
+        idx=idx+1;
       }
       numIteration++;
-      totalPointOutbound += timeScore * (1 + multiplier);
+      totalPointOutbound += timeScore * (multiplier);
     }
     flightDataOutbound.push([iteration, totalPointOutbound / numIteration]);
     iteration++;
@@ -105,44 +92,27 @@ function calculateFlightPoint(airlinePriority, preferenceTime, flightData) {
       var minute = Number(departureTime[1]) / 60;
       var second = Number(departureTime[2]) / 3600;
 
-      for (let u of preferenceTime) {
-        if (u === "Morning") {
-          if (hour > 4 && hour < 12) {
-            var timeScore = 6 - Math.abs(hour + minute + second - 8.5) / 3.5;
-          } else if (hour > 11 && hour < 18) {
-            timeScore = (6 - Math.abs(hour + minute + second - 15) / 3) * 0.7;
-          } else if (hour > 17 && hour < 5) {
-            if (hour < 5) hour += 24;
-            timeScore =
-              (6 - Math.abs(hour + minute + second - 23.5) / 5.5) * 0.5;
-          }
+      if (hour > 4 && hour < 12) {
+        var timeScore = 5 - Math.abs(hour + minute + second - 8.5) / 3.5;
+        our_time = "Morning";
+      } else if (hour > 11 && hour < 18) {
+        timeScore = (5 - Math.abs(hour + minute + second - 15) / 3) ;
+        our_time = "Afternoon";
+      } else if (hour > 17 || hour < 5) {
+        if (hour < 5) hour += 24;
+        timeScore = (5 - Math.abs(hour + minute + second - 23.5) / 5.5);
+        our_time = "Evening/Night";
+      }
+
+      var idx = 0;
+      for(let u of preferenceTime){
+        if (u === our_time){
+          timeScore = timeScore*timeMultiplier[idx];
         }
-        if (u === "Afternoon") {
-          if (hour > 4 && hour < 12) {
-            time_score =
-              (6 - Math.abs(hour + minute + second - 8.5) / 3.5) * 0.6;
-          } else if (hour > 11 && hour < 18) {
-            time_score = 6 - Math.abs(hour + minute + second - 15) / 3;
-          } else if (hour > 17 && hour < 5) {
-            if (hour < 5) hour += 24;
-            time_score =
-              (6 - Math.abs(hour + minute + second - 23.5) / 5.5) * 0.6;
-          }
-        }
-        if (u === "Evening/Night") {
-          if (hour > 4 && hour < 12) {
-            time_score =
-              (6 - Math.abs(hour + minute + second - 8.5) / 3.5) * 0.5;
-          } else if (hour > 11 && hour < 18) {
-            time_score = (6 - Math.abs(hour + minute + second - 15) / 3) * 0.7;
-          } else if (hour > 17 && hour < 5) {
-            if (hour < 5) hour += 24;
-            time_score = 6 - Math.abs(hour + minute + second - 23.5) / 5.5;
-          }
-        }
+        idx=idx+1;
       }
       numIteration++;
-      totalPointInbound += timeScore * (1 + multiplier);
+      totalPointInbound += timeScore * (multiplier);
     }
     flightDataInbound.push([iteration, totalPointInbound / numIteration]);
     iteration++;

@@ -1,5 +1,7 @@
 const name = (data, userAnswer) => {
+  console.log(data);
   const hotelData = data;
+  console.log(userAnswer);
   const results = hotelData.data.body.searchResults.results; // list of results;
   var minDistanceFromCity = parseFloat(
     results[0].landmarks[0].distance.split(" ")[0]
@@ -58,7 +60,8 @@ const name = (data, userAnswer) => {
       distanceFromAirport,
       starRating,
       userRating,
-      results[i].thumbnailUrl
+      results[i].thumbnailUrl,
+      results[i].address
     ]);
   }
 
@@ -71,7 +74,7 @@ const name = (data, userAnswer) => {
   var hotelReccomendation = [];
 
   for (let el of hotelList) {
-    hotelReccomendation.push([el[0], calcPoint(el, userAnswer), el[5]]);
+    hotelReccomendation.push([el[0], calcPoint(el, userAnswer), el[5], el[6]]);
   }
 
   hotelReccomendation.sort((a, b) => {
@@ -96,6 +99,8 @@ const calcPoint = (hotel, userAns) => {
   var res = 0;
   var multiplier = [0.8, 0.6, 0.3, 0.2];
   var hotelPriority = userAns["hotel"];
+  console.log("ASD")
+  console.log(userAns);
   for (let i = 0; i < hotelPriority.length; i++) {
     switch (hotelPriority[i]) {
       case "Near to city centre":

@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const axios = require("axios");
 const flightData = require("../computation/flightData.json");
+const flightQuery = require("../computation/weightingFunction");
 
 router.route("/").post((req, res) => {
   const user = req.body.user;
@@ -9,17 +10,19 @@ router.route("/").post((req, res) => {
   const dateOfDeparture = req.body.departureDate; // YYYY-MM-DD
   const dateOfReturn = req.body.returnDate; // YYYY-MM-DD
 
-  const flightQueryUrl = `http://localhost:5000/flightquery/`;
+  // const flightQueryUrl = `http://localhost:5000/flightquery/`;           // Removed due to change in API
   const hotelQueryUrl = `http://localhost:5000/hotelquery`;
   const profilingResultQuery = `http://localhost:5000/profres/getprofres`;
 
-  var promise1 = axios.post(flightQueryUrl, {
-    user: user,
-    source: sourceCity,
-    destination: destinationCity,
-    departureDate: dateOfDeparture,
-    returnDate: dateOfReturn
-  });
+  // Removed due to change in API
+  // var promise1 = axios.post(flightQueryUrl, {
+  //   user: user,
+  //   source: sourceCity,
+  //   destination: destinationCity,
+  //   departureDate: dateOfDeparture,
+  //   returnDate: dateOfReturn
+  // });
+
   var promise2 = axios.post(hotelQueryUrl, {
     user: user,
     destination: destinationCity,
@@ -31,20 +34,22 @@ router.route("/").post((req, res) => {
     user: user
   });
 
-  Promise.all([promise1, promise2, promise3]).then(result => {
-    //all the data of the flight retrieved from flight query , including price, direct, airline
+  Promise.all([promise2, promise3]).then(result => {
+
+
+    // Removed due to change in API
     // const flightResult = result[0].data;
     // if (!result[0].data.err) {
     //   var flightResult = result[0].data;
     // }
-    var flightResult = flightData;
+
+    var flightResult = flightQuery(result[1].data, flightData);
 
     //all the data of the hotels retrieved from hotel query, including name, thumbnail
-    var hotelResult = result[1].data;
+    var hotelResult = result[0].data;
 
     //profiling result of user
-    var profilingResult = result[2].data.itinerary;
-    console.log(profilingResult);
+    var profilingResult = result[1].data.itinerary;
 
     const itineraryAnswerUrl = `http://localhost:5000/itineraryquery`;
 

@@ -33,7 +33,6 @@ router.route("/").post((req, res) => {
         const hotelresPromise = axios.get(urlFinalQuery, { headers });
         Promise.all([profresPromise, hotelresPromise]).then(promiseResult => {
           const finalAnswer = name(promiseResult[1].data, promiseResult[0].data);
-          console.log("Hotel Okay");
           res.send(finalAnswer);
         });
       })
