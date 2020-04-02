@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const axios = require("axios");
+const flightData = require("../computation/flightData.json");
 
 router.route("/").post((req, res) => {
   const user = req.body.user;
@@ -25,6 +26,7 @@ router.route("/").post((req, res) => {
     dateCheckIn: dateOfDeparture,
     dateCheckOut: dateOfReturn
   });
+
   var promise3 = axios.post(profilingResultQuery, {
     user: user
   });
@@ -32,9 +34,10 @@ router.route("/").post((req, res) => {
   Promise.all([promise1, promise2, promise3]).then(result => {
     //all the data of the flight retrieved from flight query , including price, direct, airline
     // const flightResult = result[0].data;
-    if (!result[0].data.err) {
-      var flightResult = result[0].data;
-    }
+    // if (!result[0].data.err) {
+    //   var flightResult = result[0].data;
+    // }
+    var flightResult = flightData;
 
     //all the data of the hotels retrieved from hotel query, including name, thumbnail
     var hotelResult = result[1].data;

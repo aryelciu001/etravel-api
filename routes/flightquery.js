@@ -66,11 +66,10 @@ router.route("/").post((req, res) => {
 
           var flightAnswerAll = flightQuery(profresResult, flightResult);
 
-          var flightAnswer = flightAnswerAll.slice(0,10);
+          var flightAnswer = flightAnswerAll.slice(0, 10);
           console.log("Flight OK");
           res.send(flightAnswer);
-
-        })
+        });
       })
       .catch(function(error) {
         res.send({ err: true, data: error });
