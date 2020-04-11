@@ -1,3 +1,5 @@
+// ProfilingResult model in mongoose
+
 const mongoose = require("mongoose");
 
 const profilingResultSchema = new mongoose.Schema({

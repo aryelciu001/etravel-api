@@ -1,8 +1,11 @@
+// Profiling Result Model in
+
 const ex = require("express");
 const router = ex.Router();
 const ProfilingResult = require("../models/profilingresult.model");
 const User = require("../models/user.model");
 
+// router to store the profiling result into the database
 router.post("/addprofres", (req, res) => {
   const hotel = req.body.hotel;
   const transit = req.body.transit;

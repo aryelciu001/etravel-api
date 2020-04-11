@@ -37,7 +37,8 @@ router.route("/").post((req, res) => {
   Promise.all([promise2, promise3]).then(result => {
 
 
-    // Removed due to change in API
+    // Removed due to change in flight API
+
     // const flightResult = result[0].data;
     // if (!result[0].data.err) {
     //   var flightResult = result[0].data;

@@ -1,3 +1,5 @@
+// function to recommend the most suitable itinerary based on the profiling test
+
 const flightClass = require("./airlineList");
 
 function flightQuery(profilingResult, flightData) {

@@ -1,3 +1,5 @@
+// function to return the hotel list in JSON format to the front end
+
 const name = (data, userAnswer) => {
   const hotelData = data;
   const results = hotelData.data.body.searchResults.results; // list of results;

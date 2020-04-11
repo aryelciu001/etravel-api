@@ -3,6 +3,7 @@ const axios = require("axios");
 const flightDataCleaner = require("../computation/cleanFlightData");
 const flightQuery = require("../computation/weightingFunction");
 
+// router to get flight itinerary list
 router.route("/").post((req, res) => {
   const user = req.body.user;
   const sourceCity = req.body.source;
@@ -10,6 +11,7 @@ router.route("/").post((req, res) => {
   const dateOfDeparture = req.body.departureDate;       // YYYY-MM-DD
   const dateOfReturn = req.body.returnDate;             // YYYY-MM-DD
 
+  // url to get API Key
   const getSessionKeyUrl = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/pricing/v1.0`;
 
   const sourceCityUrlRequest = `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/US/USD/en-US/?query=${sourceCity}`;

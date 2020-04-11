@@ -1,3 +1,5 @@
+// function to return Flight Data in JSON format to the front end
+
 module.exports = function(flightData) {
   var routes = flightData["Legs"]; //all the possible route (including direct n indirect flight)
   var packages = flightData["Itineraries"]; //all the packages of flight
@@ -5,7 +7,6 @@ module.exports = function(flightData) {
   var airports = flightData["Places"]; //all the possible airports
   var flights = flightData["Segments"];
 
-  //added price
   var usedRoutes = {};
   var outbound;
 
@@ -38,8 +39,6 @@ module.exports = function(flightData) {
 
   var dirList = ["Outbound", "Inbound"];
 
-  // return packages;
-  // Added segments to the flight
   var usedSegments = {};
   for (let package of packages) {
     for (let dir of dirList) {
@@ -129,14 +128,5 @@ module.exports = function(flightData) {
       }
     }
   }
-
-  // if (true) {
-  //   packages = packages.filter(
-  //     package =>
-  //       package["Outbound"]["flights"].length === 1 ||
-  //       package["Inbound"]["flights"].length === 1
-  //   );
-  // }
-
   return packages;
 };

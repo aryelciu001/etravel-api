@@ -3,6 +3,7 @@ const axios = require("axios");
 
 const name = require("../computation/hotelquery");
 
+// router to get the hotel list from API
 router.route("/").post((req, res) => {
   const user = req.body.user;                       // userId
   const destinationCity = req.body.destination;     // must be city

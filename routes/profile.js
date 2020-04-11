@@ -6,7 +6,7 @@ const verify = require("./verifyToken");
 let Profile = require("../models/profile.model");
 let User = require("../models/user.model");
 
-//after login, user is authenticated, get current user by req.currentUser
+// router to verify after user's login is authenticated
 router.get("/afterLogin", verify, (req, res) => {
   const currentUser = req.currentUser; // get currentUser authenticated
   User.find({ _id: currentUser._id }).then(user => {
@@ -14,7 +14,7 @@ router.get("/afterLogin", verify, (req, res) => {
   });
 });
 
-//update profile
+// router to update profile data to the database
 router.post("/updateProfile", verify, (req, res) => {
   const profileId = req.body.profileId;
   Profile.find({ _id: profileId }).then(profile => {
@@ -62,7 +62,7 @@ router.post("/updateProfile", verify, (req, res) => {
   });
 });
 
-//get the profile information
+// router to get the profile of a user
 router.post("/getProfile", verify, (req, res) => {
   const profileId = req.body.profileId;
   Profile.find({ _id: profileId }).then(profile => {
@@ -70,14 +70,14 @@ router.post("/getProfile", verify, (req, res) => {
   });
 });
 
-//get all profile
+// router to return all profile
 router.route("/").get((req, res) => {
   Profile.find()
     .then(profiles => res.json(profiles))
     .catch(err => res.status(400).json("Error: " + err));
 });
 
-//get one user
+//router to get profile of current user
 router.route("/login").post((req, res) => {
   Profile.find({ email: req.body.email })
     .then(profile => {
@@ -109,7 +109,7 @@ router.route("/login").post((req, res) => {
     .catch(e => {});
 });
 
-//add new profile
+//router to add new profile
 router.route("/add").post((req, res) => {
   const name = req.body.name;
   const phoneNumber = req.body.phoneNumber;
